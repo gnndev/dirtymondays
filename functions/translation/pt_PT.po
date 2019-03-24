@@ -321,17 +321,17 @@ msgid "Search for:"
 msgstr "Procurar por:"
 
 #: searchform.php:10
-msgctxt "jointswp"
+msgctxt "dirtymondays"
 msgid "Search..."
 msgstr "Procurar…"
 
 #: searchform.php:10
-msgctxt "jointswp"
+msgctxt "dirtymondays"
 msgid "Search for:"
 msgstr "Procurar por:"
 
 #: searchform.php:12
-msgctxt "jointswp"
+msgctxt "dirtymondays"
 msgid "Search"
 msgstr "Procurar"
 

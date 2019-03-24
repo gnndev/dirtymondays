@@ -1,0 +1,338 @@
+// 1. eventi
+//
+
+#events-container {
+
+
+    .livefast {
+        display: none;
+    }
+}
+
+.home {
+
+    #events-container {
+        background-image: url(../images/grafica-live-fast.jpg);
+        background-position-y: top;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        .livefast {
+            display: block;
+            padding-top: rem-calc(28);
+            padding-left: 10%;
+            padding-right: 10%;
+
+            @include breakpoint(medium) {
+                padding-top: rem-calc(100);
+            }
+
+        }
+    }
+
+
+}
+
+#event-block {
+
+    padding-bottom: rem-calc(80);
+
+    h2 {
+        text-align: center;
+        padding: rem-calc(16 16 32);
+
+        @include breakpoint(medium) {
+            padding: rem-calc(50 16);
+        }
+    }
+
+    .block-event-single {
+        text-transform: uppercase;
+        padding: rem-calc(16 16);
+    }
+
+    .hollow {
+        margin-left: 1rem;
+
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+
+    .block-event-field {
+        text-align: center;
+        margin-top: .3rem;
+
+        @include breakpoint(medium) {
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+
+    .block-event-date {
+        font-weight: bold;
+    }
+
+
+    .block-event-title {
+        font-weight: bold;
+    }
+
+    .block-event-btn {
+        text-align: center;
+        margin-top: .7rem;
+
+        @include breakpoint(medium) {
+            text-align: right;
+            margin-top: 0;
+        }
+
+    }
+
+    .see-more {
+        text-align: center;
+    }
+}
+
+#overlay-container {
+    z-index: 99;
+    display: none;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba($color: #000000, $alpha: .8);
+
+    #overlay {
+        width: 90%;
+        max-height: 98vh;
+        margin: 0 auto;
+
+        @include breakpoint(medium) {
+            width: 50%;
+        }
+
+    }
+
+    #hide {
+        margin: 16px;
+        display: block;
+        top: 0;
+        right: 0;
+        position: fixed;
+
+        .close-icon {
+
+            cursor: pointer;
+            font-size: 24px;
+            height: 24px;
+            line-height: 24px;
+            padding: 0;
+            text-align: center;
+            width: 24px;
+            text-decoration: none !important;
+            outline: 0;
+            transition: color .2s linear;
+            color: $secondary-color;
+        }
+    }
+}
+
+// 2. newsletter
+//
+
+#newsletter-block {
+
+    /* The image used */
+    background-image: url("../images/newsletter.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(large) {
+        background-attachment: fixed;
+        background-position: center;
+
+    }
+
+
+
+    .newsletter-block-content {
+        h2 {
+            text-align: center;
+        }
+
+        padding: rem-calc(40 0 20);
+        width:90%;
+        margin: 0 auto;
+
+
+        @include breakpoint(medium) {
+            width: 35%;
+
+        }
+    }
+
+}
+
+.mailster-form li {
+    margin-left: 1rem !important;
+}
+
+
+// 3. video
+#videobg {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @include breakpoint(large) {
+        height: 85vh;
+        padding-bottom: 0;
+    }
+
+
+}
+
+// 4. shop video
+#shopbg {
+    width: 100%;
+    padding-bottom: 56.25%;
+    position: relative;
+    text-transform: uppercase;
+
+    .shop-block-content {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        h3 {
+
+            font-size: rem-calc(18);
+
+            @include breakpoint(large) {
+                padding-top: 1.5rem;
+                font-size: rem-calc(26);
+            }
+
+            color:white;
+        }
+    }
+
+    @include breakpoint(large) {
+        height: 85vh;
+        padding-bottom: 0;
+    }
+
+
+}
+
+// 5. tabs
+
+.tabs {
+    justify-content: center;
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.tabs-title {
+    text-transform: uppercase;
+    margin: 0 1rem;
+    border: 2px solid white;
+
+}
+
+.alignfull {
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    max-width: 1000%;
+    width: auto;
+}
+
+//slider 
+.block-slider {
+    position: relative;
+
+    .orbit{
+       
+
+        @include breakpoint(medium){
+            min-height:65vh;
+            overflow: hidden;
+        }
+
+        @include breakpoint(large){
+            height:85vh;
+            overflow: hidden;
+        }
+    }
+
+    .slider-wrapper {
+        
+        background-color: rgba($color: #000000, $alpha: .6);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slider-content {
+            padding-top: 20px;
+            width: 800px;
+            max-width: 90%;
+            margin: 0 auto;
+            
+        }
+
+        @include breakpoint(medium){
+            top: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+
+            .slider-content {
+                padding-top: 110px;
+                  
+            }
+        }
+    }
+}
+
+//grid
+
+.grid-item {
+    text-align: center;
+    margin: 1px;
+    background-color: $white;
+    color: $black;
+    padding-bottom: 1rem;
+    transition: background-color .3s ease-in-out;
+
+    h3 {
+        line-height: 1;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 18px;
+        margin-bottom: 0.2rem;
+    margin-top: .8rem;
+    }
+
+    h4 {
+        line-height: 1;
+        font-weight: bold;
+        font-size: 17px;
+        margin-block-end: .8rem;
+    }
+
+    &:hover {
+        background-color: $black;
+        color: $white;
+    }
+}

@@ -6,7 +6,8 @@
  */
 
 get_header(); ?>
-			
+	
+	<div class="page-content">
 	<div class="content">
 
 		<div class="inner-content grid-x grid-margin-x grid-padding-x">
@@ -16,11 +17,11 @@ get_header(); ?>
 				<article class="content-not-found">
 				
 					<header class="article-header">
-						<h1><?php _e( 'Epic 404 - Article Not Found', 'jointswp' ); ?></h1>
+						<h1><?php _e( 'Epic 404 - Article Not Found', 'dirtymondays' ); ?></h1>
 					</header> <!-- end article header -->
 			
 					<section class="entry-content">
-						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'jointswp' ); ?></p>
+						<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'dirtymondays' ); ?></p>
 					</section> <!-- end article section -->
 
 					<section class="search">
@@ -34,5 +35,6 @@ get_header(); ?>
 		</div> <!-- end #inner-content -->
 
 	</div> <!-- end #content -->
+	</div>
 
 <?php get_footer(); ?>

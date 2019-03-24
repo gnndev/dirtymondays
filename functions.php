@@ -32,16 +32,20 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 // require_once(get_template_directory().'/functions/editor-styles.php'); 
 
 // Remove Emoji Support
-// require_once(get_template_directory().'/functions/disable-emoji.php'); 
+ require_once(get_template_directory().'/functions/disable-emoji.php'); 
 
 // Related post function - no need to rely on plugins
 // require_once(get_template_directory().'/functions/related-posts.php'); 
 
 // Use this as a template for custom post types
-// require_once(get_template_directory().'/functions/custom-post-type.php');
+ require_once(get_template_directory().'/functions/event-post-type.php');
+ require_once(get_template_directory().'/functions/rsvp-post-type.php');
 
 // Customize the WordPress login menu
 // require_once(get_template_directory().'/functions/login.php'); 
 
 // Customize the WordPress admin
-// require_once(get_template_directory().'/functions/admin.php'); 
+// require_once(get_template_directory().'/functions/admin.php');
+
+// add custom block through acf
+require_once(get_template_directory().'/functions/blocks.php'); 

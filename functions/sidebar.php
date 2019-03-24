@@ -3,8 +3,8 @@
 function joints_register_sidebars() {
 	register_sidebar(array(
 		'id' => 'sidebar1',
-		'name' => __('Sidebar 1', 'jointswp'),
-		'description' => __('The first (primary) sidebar.', 'jointswp'),
+		'name' => __('Sidebar 1', 'dirtymondays'),
+		'description' => __('The first (primary) sidebar.', 'dirtymondays'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
@@ -13,13 +13,52 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'offcanvas',
-		'name' => __('Offcanvas', 'jointswp'),
-		'description' => __('The offcanvas sidebar.', 'jointswp'),
+		'name' => __('Offcanvas', 'dirtymondays'),
+		'description' => __('The offcanvas sidebar.', 'dirtymondays'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',
 		'after_title' => '</h4>',
 	));
+
+	register_sidebar(array(
+		'id' => 'footer1',
+		'name' => __('Footer 1', 'dirtymondays'),
+		'description' => __('The first footer sidebar.', 'dirtymondays'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
+		'id' => 'footer2',
+		'name' => __('Footer 2', 'dirtymondays'),
+		'description' => __('The second footer sidebar.', 'dirtymondays'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+		'id' => 'footer3',
+		'name' => __('Footer 3', 'dirtymondays'),
+		'description' => __('The third footer sidebar.', 'dirtymondays'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+	register_sidebar(array(
+		'id' => 'footer4',
+		'name' => __('Footer 4', 'dirtymondays'),
+		'description' => __('The fourth footer sidebar.', 'dirtymondays'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
 
 	/*
 	to add more sidebars or widgetized areas, just copy
@@ -31,8 +70,8 @@ function joints_register_sidebars() {
 
 	register_sidebar(array(
 		'id' => 'sidebar2',
-		'name' => __('Sidebar 2', 'jointswp'),
-		'description' => __('The second (secondary) sidebar.', 'jointswp'),
+		'name' => __('Sidebar 2', 'dirtymondays'),
+		'description' => __('The second (secondary) sidebar.', 'dirtymondays'),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4 class="widgettitle">',

@@ -19,6 +19,7 @@ CSS file.
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+
 // Select the components you want to use
 @include foundation-global-styles;
 
@@ -66,3 +67,14 @@ CSS file.
 
 // Import your custom styles
 @import "global";
+@import "header";
+@import "footer";
+@import "homepage";
+@import "blocks";
+@import "popup";
+@import "more-videos";
+@import "single-cat-video";
+@import "liveexperience";
+@import "../../../node_modules/jquery.mb.ytplayer/dist/css/jquery.mb.YTPlayer.min";
+@import "simplelightbox";
+@import "../../../node_modules/responsive-nav/responsive-nav";

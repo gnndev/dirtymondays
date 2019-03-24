@@ -7,28 +7,51 @@
  * For more info: https://developer.wordpress.org/themes/basics/template-files/#template-partials
  */			
  ?>
-					
-				<footer class="footer" role="contentinfo">
-					
-					<div class="inner-footer grid-x grid-margin-x grid-padding-x">
-						
-						<div class="small-12 medium-12 large-12 cell">
-							<nav role="navigation">
-	    						<?php joints_footer_links(); ?>
-	    					</nav>
-	    				</div>
-						
-						<div class="small-12 medium-12 large-12 cell">
-							<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
-						</div>
-					
-					</div> <!-- end #inner-footer -->
-				
-				</footer> <!-- end .footer -->
+		<div id="footer-widget" class="content">
+			<div class="grid-x">
+				<div class="cell small-12 medium-2">
+
+					<?php if ( is_active_sidebar( 'footer1' ) ) : ?>
+
+					<?php dynamic_sidebar( 'footer1' ); ?>
+
+					<?php endif; ?>
+
+				</div>
+				<div class="cell small-12 medium-2">
+
+					<?php if ( is_active_sidebar( 'footer2' ) ) : ?>
+
+					<?php dynamic_sidebar( 'footer2' ); ?>
+
+					<?php endif; ?>
+
+				</div>
+				<div class="cell small-12 medium-2">
+
+					<?php if ( is_active_sidebar( 'footer3' ) ) : ?>
+
+					<?php dynamic_sidebar( 'footer3' ); ?>
+
+					<?php endif; ?>
+
+				</div>
+				<div class="cell small-12 medium-6 text-right">
+
+					<?php if ( is_active_sidebar( 'footer4' ) ) : ?>
+
+					<?php dynamic_sidebar( 'footer4' ); ?>
+
+					<?php endif; ?>
+
+				</div>
+			</div>
+		</div>
+
+		<footer class="footer text-center" role="contentinfo">
+			<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
 			
-			</div>  <!-- end .off-canvas-content -->
-					
-		</div> <!-- end .off-canvas-wrapper -->
+		</footer> <!-- end .footer -->
 		
 		<?php wp_footer(); ?>
 		

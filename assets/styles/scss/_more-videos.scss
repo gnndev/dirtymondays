@@ -1,0 +1,30 @@
+#more-videos {
+    .video-link {
+        display: flex;
+        flex-direction: column;
+        
+        .video-caption{
+            transition: background-color 0.2s ease ;
+            width: fit-content;
+            margin-top:3px;
+            padding: rem-calc(3 6);
+        }
+
+        img {
+            border: 1px solid $black;
+            transition: border 0.2s ease ;
+        }
+
+        &:hover {
+            .video-caption {
+                background-color: $secondary-color;
+            }
+
+            img {
+                border: 1px solid $secondary-color;
+            }
+        }
+    }
+
+
+}

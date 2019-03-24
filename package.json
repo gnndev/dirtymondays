@@ -1,14 +1,14 @@
 {
-  "name": "jointswp-sass",
+  "name": "dirtymondays-sass",
   "version": "5.0.0",
   "description": "A WordPress starter theme using Foundation 6",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JeremyEnglert/JointsWP.git"
+    "url": "https://github.com/JeremyEnglert/dirtymondays.git"
   },
   "author": "Jeremy Englert",
   "license": "GPL-2.0 AND MIT",
-  "homepage": "https://github.com/JeremyEnglert/JointsWP",
+  "homepage": "https://github.com/JeremyEnglert/dirtymondays",
   "devDependencies": {
     "babel-preset-es2015": "^6.5.0",
     "browser-sync": "^2.11.0",
@@ -43,5 +43,11 @@
     "watch": "gulp watch",
     "browsersync": "gulp browsersync",
     "update-foundation": "npm install foundation-sites"
+  },
+  "dependencies": {
+    "jquery.mb.ytplayer": "^3.2.8",
+    "jquery.nicescroll": "^3.7.6",
+    "responsive-nav": "^1.0.39",
+    "simplelightbox": "^1.16.3"
   }
 }

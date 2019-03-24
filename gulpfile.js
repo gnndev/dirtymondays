@@ -12,7 +12,7 @@ var gulp  = require('gulp'),
 // Modify these variables to match your project needs
 
 // Set local URL if using Browser-Sync
-const LOCAL_URL = 'http://jointswp.local/';
+const LOCAL_URL = 'http://dirtymondays.local/';
 
 // Set path to Foundation files
 const FOUNDATION = 'node_modules/foundation-sites';
@@ -21,34 +21,38 @@ const FOUNDATION = 'node_modules/foundation-sites';
 const SOURCE = {
 	scripts: [
 		// Lets grab what-input first
-	    'node_modules/what-input/dist/what-input.js',
+		'node_modules/what-input/dist/what-input.js',
+		'node_modules/jquery.nicescroll/dist/jquery.nicescroll.js',
+		'node_modules/responsive-nav/responsive-nav.js',
+		'node_modules/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js',
+		'node_modules/simplelightbox/dist/simple-lightbox.min.js',
 
 		// Foundation core - needed if you want to use any of the components below
 		FOUNDATION + '/dist/js/plugins/foundation.core.js',
 		FOUNDATION + '/dist/js/plugins/foundation.util.*.js',
 
 		// Pick the components you need in your project
-		FOUNDATION + '/dist/js/plugins/foundation.abide.js',
+		//FOUNDATION + '/dist/js/plugins/foundation.abide.js',
 		FOUNDATION + '/dist/js/plugins/foundation.accordion.js',
 		FOUNDATION + '/dist/js/plugins/foundation.accordionMenu.js',
 		FOUNDATION + '/dist/js/plugins/foundation.drilldown.js',
 		FOUNDATION + '/dist/js/plugins/foundation.dropdown.js',
 		FOUNDATION + '/dist/js/plugins/foundation.dropdownMenu.js',
-		FOUNDATION + '/dist/js/plugins/foundation.equalizer.js',
-		FOUNDATION + '/dist/js/plugins/foundation.interchange.js',
-		FOUNDATION + '/dist/js/plugins/foundation.offcanvas.js',
+		//FOUNDATION + '/dist/js/plugins/foundation.equalizer.js',
+		//FOUNDATION + '/dist/js/plugins/foundation.interchange.js',
+		//FOUNDATION + '/dist/js/plugins/foundation.offcanvas.js',
 		FOUNDATION + '/dist/js/plugins/foundation.orbit.js',
 		FOUNDATION + '/dist/js/plugins/foundation.responsiveMenu.js',
 		FOUNDATION + '/dist/js/plugins/foundation.responsiveToggle.js',
 		FOUNDATION + '/dist/js/plugins/foundation.reveal.js',
 		FOUNDATION + '/dist/js/plugins/foundation.slider.js',
 		FOUNDATION + '/dist/js/plugins/foundation.smoothScroll.js',
-		FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
+		//FOUNDATION + '/dist/js/plugins/foundation.magellan.js',
 		FOUNDATION + '/dist/js/plugins/foundation.sticky.js',
 		FOUNDATION + '/dist/js/plugins/foundation.tabs.js',
 		FOUNDATION + '/dist/js/plugins/foundation.responsiveAccordionTabs.js',
 		FOUNDATION + '/dist/js/plugins/foundation.toggler.js',
-		FOUNDATION + '/dist/js/plugins/foundation.tooltip.js',
+		//FOUNDATION + '/dist/js/plugins/foundation.tooltip.js',
 
 		// Place custom JS here, files will be concantonated, minified if ran with --production
 		'assets/scripts/js/**/*.js',
@@ -144,7 +148,7 @@ gulp.task('images', function() {
  gulp.task( 'translate', function () {
      return gulp.src( SOURCE.php )
          .pipe(plugin.wpPot( {
-             domain: 'jointswp',
+             domain: 'dirtymondays',
              package: 'Example project'
          } ))
         .pipe(gulp.dest('file.pot'));

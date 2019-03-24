@@ -1,0 +1,132 @@
+a {
+    transition: .2s;
+}
+
+.page-template-template-liveexp {
+
+    .orbit {
+        @include breakpoint(medium) {
+            height: 100vh;
+        }
+    }
+
+    .bg-slider {
+        display: none;
+
+        @include breakpoint(medium) {
+            display: block;
+            position: absolute;
+            opacity: 0;
+            height: 100vh;
+            width: 100%;
+            top: 0;
+            opacity: 1;
+        }
+    }
+
+    font-size: 14px;
+
+    @include breakpoint(medium) {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    header,
+    footer,
+    #footer-widget {
+        display: none;
+    }
+
+    label {
+        color: white;
+    }
+
+    .logo-popup {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .page-popup {
+        padding-top: 68px;
+    }
+}
+
+.page-template-template-liveexp {
+    font-size: 14px;
+
+    @include breakpoint(medium) {
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    header,
+    footer,
+    #footer-widget {
+        display: none;
+    }
+
+    label {
+        color: white;
+    }
+
+    .logo-popup {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+    }
+
+    .page-popup {
+        padding-top: 68px;
+    }
+}
+
+// nuova pagina a blocchi
+.page-template-template-live-experience {
+    overflow-x: hidden;
+    padding-bottom: 60px;
+
+    header,
+    footer,
+    #footer-widget {
+        display: none;
+    }
+
+    #header-mobile {
+        @include breakpoint(medium) {
+            display: none;
+        }
+    }
+
+    label {
+        color: white;
+    }
+
+    .logo-popup {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        z-index: 1;
+    }
+
+    h3 {
+        font-size: rem-calc(20);
+        @include breakpoint(medium){
+            font-size: rem-calc(30);
+        }
+    }
+
+    .input {
+        margin: 0;
+    }
+
+    .mailster-submit-wrapper {
+        margin-top: 0px;
+    }
+    .mailster-form-5 .mailster-wrapper {
+        
+        padding: 8px!important;
+        
+    }
+
+}
