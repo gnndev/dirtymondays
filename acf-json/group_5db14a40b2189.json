@@ -3,6 +3,76 @@
     "title": "carousel",
     "fields": [
         {
+            "key": "field_5db1794bd7bce",
+            "label": "Block title",
+            "name": "carousel_block_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5db1795bd7bcf",
+            "label": "block link",
+            "name": "carousel_block_link",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_5db17f94c6bda",
+            "label": "Block url",
+            "name": "carousel_block_url",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_5db1abfdd2768",
+            "label": "Block url mobile",
+            "name": "carousel_block_url_mobile",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
             "key": "field_5db14a463c877",
             "label": "Carousel",
             "name": "carousel",
@@ -81,6 +151,22 @@
                     "placeholder": ""
                 },
                 {
+                    "key": "field_5db1a97507925",
+                    "label": "mobile_link",
+                    "name": "mobile_link",
+                    "type": "url",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": ""
+                },
+                {
                     "key": "field_5db14aa23c87b",
                     "label": "subtitle",
                     "name": "subtitle",
@@ -119,5 +205,5 @@
     "hide_on_screen": "",
     "active": 1,
     "description": "",
-    "modified": 1571900100
+    "modified": 1571925001
 }

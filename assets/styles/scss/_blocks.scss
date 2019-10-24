@@ -417,18 +417,41 @@
 }
 
 .block-carousel {
+    background-color: $white;
+    color: $black;
+
+    .block-header {
+        justify-content: space-between;
+        display: flex;
+        padding-top: 32px;
+
+        .block-title {
+            font-size: rem-calc(20);
+        }
+    }
+
+    a {
+        color: $black;
+    }
+
     .single-slide {
         padding: 2rem;
 
         h4 {
             margin-top: rem-calc(10);
+            font-size: 1rem;
+            margin-bottom: 0;
         }
 
         a {
             text-align: center
         }
+
+        .subtitle {
+            font-size: rem-calc(12)
+        }
     }
 
-    
+
 
 }
