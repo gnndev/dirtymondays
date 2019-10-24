@@ -8,9 +8,6 @@ get_header(); ?>
 <main class="main" role="main">
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <div class="live">
-<div class="logo-popup show-for-medium"><?php if ( function_exists( 'the_custom_logo' ) ) {
-						the_custom_logo();
-					} ?></div>
     
 <article id="post-<?php the_ID(); ?>" <?php post_class('nicescroll'); ?> role="article" itemscope itemtype="http://schema.org/WebPage">
 
