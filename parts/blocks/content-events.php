@@ -38,7 +38,7 @@
                 <div class="cell small-12 medium-4 block-event-field block-event-desc"><?php the_field('event_location', get_the_ID()); ?></div>  
                 <div class="cell small-12 medium-3 block-event-field block-event-btn">
                     <?php if (get_field('event_rsvp', get_the_ID())) : ?> 
-                    <button class="hollow button rsvp-btn load" data-url="<?php the_field('event_rsvp', get_the_ID()); ?>" >RSVP</a>
+                    <button onClick="fbq('track', 'Lead'); fbq('trackCustom', 'RSVP');" class="hollow button rsvp-btn load" data-url="<?php the_field('event_rsvp', get_the_ID()); ?>" >RSVP</a>
                     <?php endif; ?>
 
                     <button class="hollow button rsvp-btn load" data-url="<?php the_permalink(); ?>">ABOUT</a>
