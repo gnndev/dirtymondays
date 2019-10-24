@@ -73,6 +73,26 @@ function my_acf_init() {
 			'category'			=> 'layout',
 			'icon'				=> 'clipboard',
 			'keywords'			=> array( 'grid', 'dirtymondays' ),
+		));
+		
+		acf_register_block(array(
+			'name'				=> 'full-title',
+			'title'				=> __('Full title'),
+			'description'		=> __('title with background'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'clipboard',
+			'keywords'			=> array( 'grid', 'dirtymondays' ),
+		));
+		
+		acf_register_block(array(
+			'name'				=> 'carousel',
+			'title'				=> __('Carousel'),
+			'description'		=> __('carousel'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'clipboard',
+			'keywords'			=> array( 'carousel', 'dirtymondays' ),
         ));
 	}
 }

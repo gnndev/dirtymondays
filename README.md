@@ -7,9 +7,12 @@ dirtymondays requires [Node.js](https://nodejs.org) v6.9.x or newer. This doesn'
 ### Download dirtymondays and install dependencies with npm 
 ```bash
 $ cd my-wordpress-folder/wp-content/themes/
-$ git clone https://github.com/JeremyEnglert/dirtymondays.git
+$ git clone https://gnndev@bitbucket.org/gnndev/dirtymondays.git
 $ cd dirtymondays
 $ npm install
+
+
+git remote add origin https://gnndev@bitbucket.org/gnndev/dirtymondays.git
 ```
 At this point, dirtymondays should be installed and fully running on your local machine. If you prefer to install the theme manually, that will work as well - just be sure to run `npm install` after manually moving the files into the `/themes/` directory.
 

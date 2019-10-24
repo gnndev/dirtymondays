@@ -26,7 +26,7 @@
 			<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
 			<link href="<?php echo get_template_directory_uri(); ?>/assets/images/apple-icon-touch.png" rel="apple-touch-icon" />	
 	    <?php } ?>
-		<link href="https://fonts.googleapis.com/css?family=Oswald:400,700" rel="stylesheet">
+			<link href="https://fonts.googleapis.com/css?family=Oswald:400,700|PT+Serif:400,700&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">

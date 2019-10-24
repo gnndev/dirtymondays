@@ -261,22 +261,26 @@
 .block-slider {
     position: relative;
 
-    .orbit{
-       
+    @include breakpoint(medium) {
+        margin-top: -120px;
+    }
 
-        @include breakpoint(medium){
-            min-height:65vh;
+    .orbit {
+
+
+        @include breakpoint(medium) {
+            min-height: 65vh;
             overflow: hidden;
         }
 
-        @include breakpoint(large){
-            height:85vh;
+        @include breakpoint(large) {
+            height: 85vh;
             overflow: hidden;
         }
     }
 
     .slider-wrapper {
-        
+
         background-color: rgba($color: #000000, $alpha: .6);
         display: flex;
         justify-content: center;
@@ -287,10 +291,10 @@
             width: 800px;
             max-width: 90%;
             margin: 0 auto;
-            
+
         }
 
-        @include breakpoint(medium){
+        @include breakpoint(medium) {
             top: 0;
             left: 0;
             position: absolute;
@@ -299,10 +303,43 @@
 
             .slider-content {
                 padding-top: 110px;
-                  
+
             }
         }
     }
+
+    label {
+        color: white;
+    }
+
+
+
+    h3 {
+        font-size: rem-calc(20);
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(30);
+        }
+    }
+
+    .input {
+        margin: 0;
+    }
+
+    .mailster-submit-wrapper {
+        margin-top: -48px !important;
+    }
+
+    .submit-button {
+        margin: 0;
+    }
+
+    .mailster-form-5 .mailster-wrapper {
+
+        padding: 8px !important;
+
+    }
+
 }
 
 //grid
@@ -312,7 +349,6 @@
     margin: 1px;
     background-color: $white;
     color: $black;
-    padding-bottom: 1rem;
     transition: background-color .3s ease-in-out;
 
     h3 {
@@ -321,18 +357,78 @@
         text-transform: uppercase;
         font-size: 18px;
         margin-bottom: 0.2rem;
-    margin-top: .8rem;
+        margin-top: .8rem;
     }
 
     h4 {
         line-height: 1;
-        font-weight: bold;
-        font-size: 17px;
+
+        font-size: 15px;
         margin-block-end: .8rem;
+    }
+
+    .icon {
+        position: relative;
+    }
+
+    .img-container {
+        background: rgba(0, 0, 0, 0.4);
+        color: $white;
+        display: flex;
+        top: 0;
+        position: absolute;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    p {
+        font-family: "PT Serif", serif;
+        font-weight: 300;
+        font-size: 12px;
+        padding-bottom: 1rem;
     }
 
     &:hover {
         background-color: $black;
         color: $white;
     }
+}
+
+// full title
+
+.full-title {
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
+    background: white;
+    color: black;
+    text-align: center;
+    padding: .6rem 0;
+
+    h2 {
+        font-size: 1.8rem;
+        margin-bottom: 0;
+        line-height: 1;
+        font-family: 'PT Serif', serif;
+    }
+}
+
+.block-carousel {
+    .single-slide {
+        padding: 2rem;
+
+        h4 {
+            margin-top: rem-calc(10);
+        }
+
+        a {
+            text-align: center
+        }
+    }
+
+    
+
 }

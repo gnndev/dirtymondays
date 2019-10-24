@@ -8,6 +8,10 @@ Stylesheet: Global Stylesheet
 Layout
 *********************/
 
+body{
+	overflow-x: hidden;
+}
+
 .page-content {
 
 	@include breakpoint (medium) {
@@ -553,4 +557,14 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 	display: none !important;
 	position: absolute !important;
 	left: -9000px;
+}
+
+/** mailster */
+.mailster-_recaptcha-wrapper{
+	width:1px!important;
+	height: 1px!important;
+}
+.mailster-submit-wrapper{
+	width:100%!important;
+	text-align: center;
 }

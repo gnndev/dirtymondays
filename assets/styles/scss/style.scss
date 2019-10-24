@@ -16,6 +16,8 @@ CSS file.
 
 // Import Motion-UI from vendor files
 @import "../../../node_modules/motion-ui/src/motion-ui";
+@import "../../../node_modules/slick-carousel/slick/slick.scss";
+@import "../../../node_modules/slick-carousel/slick/slick-theme.scss";
 @include motion-ui-transitions;
 @include motion-ui-animations;
 

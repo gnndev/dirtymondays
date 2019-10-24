@@ -14,10 +14,10 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
  <div class="slider-bg">
 	<div class="orbit" role="region" aria-label="Favorite Space Pictures" data-orbit data-options="animInFromLeft:fade-in; animInFromRight:fade-in; animOutToLeft:fade-out; animOutToRight:fade-out;">
 		<div class="orbit-wrapper">
-			<div class="orbit-controls">
+			<!-- <div class="orbit-controls">
 				<button class="orbit-previous"><span class="show-for-sr">Previous Slide</span><i class="fas fa-chevron-left"></i></button>
 				<button class="orbit-next"><span class="show-for-sr">Next Slide</span><i class="fas fa-chevron-right"></i></button>
-			</div>
+			</div> -->
 			
 			<?php 
 
