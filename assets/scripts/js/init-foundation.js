@@ -109,3 +109,10 @@ jQuery('.slick-carousel').slick({
     }
   ]
 });
+
+var accountInstagram = document.getElementById("instagram-account");
+if (accountInstagram){
+  accountInstagram.addEventListener('click', function(e){
+    e.target.value = "@";
+  })
+}
