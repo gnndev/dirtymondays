@@ -1,0 +1,409 @@
+.custom-shop {
+    background: white;
+    color: black;
+    clear: both;
+    a {
+        color: black;
+    }
+    label{
+        color:black;
+    }
+
+    
+}
+
+// .single-product, .woocommerce-cart, .woocommerce-checkout, .woocommerce-page {
+//     header{background:black;a{color:white!important}}
+//     background: white;
+//     color: black;
+//     clear: both;
+//     a {
+//         color: black;
+//     }
+//     label{
+//         color:black;
+//     }
+// } 
+
+.woocommerce-page {
+    clear: both;
+    .page-content{
+    padding-top: 20px;
+    display: flex;
+    background: white;
+    color: black;
+    clear: both;
+    a {
+        color: black;
+    }
+    label{
+        color:black;
+    }
+
+    tfoot, thead {
+        color: black;
+    }
+}
+}
+.sizes-cart{
+    margin-bottom:50px;
+    a{
+        font-size:18px;
+        padding-left:0;
+    }
+    ul{margin-left:0!important;}
+    tfoot, thead {
+        color:black;
+        th{
+         background-color: #f2f2f2;
+        }
+     }
+ 
+     tbody tr:nth-child(2n) {
+         border-bottom: 0;
+         background-color: #f2f2f2;
+     }
+}
+
+.products-header {
+    height: 500px;
+    max-width: 1920px;
+    margin: 0 auto;
+    background-image: url('https://dirtymondays.com/backoffice/wp-content/uploads/2020/08/shop-header.jpg');
+    background-attachment: fixed;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @include breakpoint(medium){
+        height: 360px;
+    }
+}
+
+.products-bar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        font-size:2rem;
+        text-transform: uppercase;
+    }
+    >div {
+        margin-top:20px;
+        display: flex;
+        justify-content: space-between;
+        @include breakpoint(medium){
+            margin-top:0;
+         justify-content: unset;
+        }
+    }
+    @include breakpoint(medium){
+        margin-top: 30px;
+        margin-bottom: 10px;
+        flex-direction: row;
+    }
+
+    .products-filters {
+        p {
+            padding-right: 20px;
+            margin-bottom:0;
+
+        }
+
+        select{margin-bottom:0;
+        border:1px solid black;
+        height: 2rem;
+        margin: 0;
+        padding: .3rem;
+     
+        font-size: 1rem;
+        font-weight: 400;
+        line-height:1rem;
+        color: #000;
+       
+    
+    }
+
+        display: flex;
+        align-items: center;
+    }
+    .carrello {
+        display: flex;
+        align-items: center;
+        margin-left:30px;
+        i{
+            font-size:22px;
+        }
+        a{display: inline-block;}
+
+        img{
+            height: 32px;
+        }
+    }
+}
+
+.products-grid {
+    position: relative;
+    text-transform: uppercase;
+    .stamp {
+        position: absolute;
+        width: 50%;
+        top: 0;
+        left: 50%;
+        height: 0;
+        background-color: transparent;
+        @include breakpoint(medium){
+            height: 300px;
+        }
+    }
+}
+
+.products-grid-item {
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 30px;
+    width: 90%;
+
+    @include breakpoint(medium){
+        width: 40%;
+        margin-bottom: 100px;
+    }
+
+    h2 {
+
+        font-size: rem-calc(24);
+    }
+}
+.woocommerce-tabs{display: none;}
+.related.products{display: none;}
+
+
+.woocommerce #respond input#submit.alt.disabled, .woocommerce #respond input#submit.alt.disabled:hover, .woocommerce #respond input#submit.alt:disabled, .woocommerce #respond input#submit.alt:disabled:hover, .woocommerce #respond input#submit.alt:disabled[disabled], .woocommerce #respond input#submit.alt:disabled[disabled]:hover, .woocommerce a.button.alt.disabled, .woocommerce a.button.alt.disabled:hover, .woocommerce a.button.alt:disabled, .woocommerce a.button.alt:disabled:hover, .woocommerce a.button.alt:disabled[disabled], .woocommerce a.button.alt:disabled[disabled]:hover, .woocommerce button.button.alt.disabled, .woocommerce button.button.alt.disabled:hover, .woocommerce button.button.alt:disabled, .woocommerce button.button.alt:disabled:hover, .woocommerce button.button.alt:disabled[disabled], .woocommerce button.button.alt:disabled[disabled]:hover, .woocommerce input.button.alt.disabled, .woocommerce input.button.alt.disabled:hover, .woocommerce input.button.alt:disabled, .woocommerce input.button.alt:disabled:hover, .woocommerce input.button.alt:disabled[disabled], .woocommerce input.button.alt:disabled[disabled]:hover {
+    background-color: black;
+   border-radius: 0;
+    color: #fff;
+    border: 2px solid #000;
+}
+.woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
+    background-color: black;
+    color: #fff;
+    border-radius: 0;
+    border: 2px solid #000;
+}
+
+.woocommerce div.product p.price, .woocommerce div.product span.price {
+    color: black;
+    font-size: 1.25em;
+    margin-bottom:40px;
+}
+
+.woocommerce #respond input#submit.alt:hover, .woocommerce a.button.alt:hover, .woocommerce button.button.alt:hover, .woocommerce input.button.alt:hover {
+    background-color: white;
+    color: black;
+    border:2px solid black
+}
+
+.product_meta{
+    display: none;
+}
+
+.single-product label{
+    font-size: 18px;
+    font-weight:400!important;
+    text-transform: uppercase;
+}
+
+.accordion-menu .is-accordion-submenu-parent:not(.has-submenu-toggle)>a:after {
+    left: 6rem;
+}
+
+.woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
+    width: 100%;
+    display:block;
+    margin-top:20px;
+}
+
+.single-carrello{
+    margin: 0;
+    text-align: right;
+    z-index: 99;
+    position: relative;
+    @include breakpoint(medium){
+        transform: translateY(45px);
+
+    }
+    a{display: inline-block;}
+    img{
+        height: 32px;
+    }
+}
+
+.woocommerce div.product .product_title {
+    display: inline-block;
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    font-size:2rem;
+    text-transform: uppercase;
+}
+
+.woocommerce-message {
+    border-top-color: black;
+}
+
+#add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text {
+   
+    border: 1px solid black;
+    
+}
+
+.woocommerce #content table.cart td.actions .input-text, .woocommerce table.cart td.actions .input-text, .woocommerce-page #content table.cart td.actions .input-text, .woocommerce-page table.cart td.actions .input-text {
+    width: 151px;
+}
+
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button {
+
+    color: black;
+    background-color: white;
+    border:2px solid black;
+ &:hover{
+    color: white;
+    background-color: black;
+    border:2px solid black;
+ }
+}
+
+.woocommerce span.onsale {
+   
+    background-color: black; 
+    color: white;
+   
+}
+
+#add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
+    width: 150px;
+    box-shadow: none;
+}
+
+.woocommerce-cart table.cart .product-thumbnail, .woocommerce-checkout table.cart .product-thumbnail {
+    width: 180px!important;
+}
+
+.woocommerce-form-coupon-toggle {
+    display: none;
+}
+
+.woocommerce a.remove {
+
+    color: black!important;
+
+}
+
+.quantity {
+    @include breakpoint(small only){display: flex;
+        justify-content: flex-end;}
+    
+}
+
+.woocommerce div.product .product_title {
+font-size: 2rem;
+text-transform: uppercase;
+}
+
+.woocommerce div.product div.summary {
+    @include breakpoint(medium){
+    padding-right: 100px;}
+    margin-bottom: 2em;
+}
+
+.woocommerce div.product form.cart .button {
+    margin-bottom: 30px;
+    clear: left;
+ 
+}
+
+.woocommerce-product-gallery__image {
+    pointer-events: none;
+}
+
+.qty-label{
+    float: left;
+    padding-right: 32px;
+}
+
+.woocommerce div.product {
+    display: flex;
+    flex-wrap: wrap;
+    .woocommerce-product-gallery{
+        float: none;
+        order:1;
+        width:100%;
+        @include breakpoint(medium){
+            order:0;
+            width:48%;
+            flex: 0 0 auto;
+        }
+    }
+
+    .entry-summary{
+        order:0;
+        width:100%;
+        float: none;
+        @include breakpoint(medium){
+            order:1;
+            margin-left:4%;
+            width:48%;
+            flex: 0 0 auto;
+        }
+
+    }
+   
+}
+#billing_address_2_field, #billing_company_field{display: none!important;}
+.woocommerce-checkout-review-order-table{
+    td.product-name{
+        display: flex;
+    align-items: center;
+    }
+    .variation{
+        margin: 0 20px;
+    display: flex;
+    }
+
+    dl dt {
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+}
+#order_review_heading{
+    margin-top: 30px;
+}
+
+form.woocommerce-checkout{
+    margin-bottom:50px;
+    grid-template-rows: auto auto auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+    @include breakpoint(medium){
+        grid-template-rows: 40px auto;
+        grid-template-columns: 1fr 1fr;
+    }
+    .woocommerce .col2-set, .woocommerce-page .col2-set {
+         width: unset; 
+    }
+
+     .col-1,  .col-2{
+        width:100%!important;
+        float:none!important;
+    }
+    #order_review{
+        
+    @include breakpoint(medium){
+        grid-column-start: 2;
+    grid-column-end: 3;
+    }
+    }
+}

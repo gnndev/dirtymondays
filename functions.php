@@ -49,3 +49,5 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 
 // add custom block through acf
 require_once(get_template_directory().'/functions/blocks.php'); 
+
+require_once(get_template_directory().'/functions/woocommerce.php'); 

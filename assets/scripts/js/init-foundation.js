@@ -26,18 +26,18 @@ if (window.innerWidth > 1024) {
   }
 }
 
-var nav = responsiveNav(".nav-collapse", {
-  animate: true, // Boolean: Use CSS3 transitions, true or false
-  transition: 284, // Integer: Speed of the transition, in milliseconds
-  label: '<i class="fa fa-bars"></i>',
-  insert: "after",
-  customToggle: "",
-  closeOnNavClick: true,
-  openPos: "relative",
-  navClass: "nav-collapse",
-  navActiveClass: "js-nav-active",
-  jsClass: "js"
-});
+// var nav = responsiveNav(".nav-collapse", {
+//   animate: true, // Boolean: Use CSS3 transitions, true or false
+//   transition: 284, // Integer: Speed of the transition, in milliseconds
+//   label: '<i class="fa fa-bars"></i>',
+//   insert: "after",
+//   customToggle: "",
+//   closeOnNavClick: true,
+//   openPos: "relative",
+//   navClass: "nav-collapse",
+//   navActiveClass: "js-nav-active",
+//   jsClass: "js"
+// });
 
 
 // popup events page
@@ -115,4 +115,48 @@ if (accountInstagram){
   accountInstagram.addEventListener('click', function(e){
     e.target.value = "@";
   })
+}
+
+
+var $grid =jQuery('.products-grid').isotope({
+  // options
+  itemSelector: '.products-grid-item',
+  stamp: '.stamp'
+});
+
+// store filter for each group
+var filters = {};
+
+jQuery('.products-filters').on( 'change', function( event ) {
+  var $select = jQuery( event.target );
+  // get group key
+  var filterGroup = $select.attr('value-group');
+  // set filter for group
+  filters[ filterGroup ] = event.target.value;
+  // combine filters
+  var filterValue = concatValues( filters );
+  // set filter for Isotope
+  $grid.isotope({ filter: filterValue });
+});
+
+// flatten object by concatting values
+function concatValues( obj ) {
+  var value = '';
+  for ( var prop in obj ) {
+    value += obj[ prop ];
+  }
+  return value;
+}
+
+
+/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
+function openNav() {
+  document.getElementById("mySidenav").style = "transform: translateX(0)";
+  
+}
+
+/* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
+function closeNav() {
+  document.getElementById("mySidenav").style = "transform: translateX(100%)";
+
 }

@@ -23,10 +23,10 @@ const SOURCE = {
 		// Lets grab what-input first
 		'node_modules/what-input/dist/what-input.js',
 		'node_modules/jquery.nicescroll/dist/jquery.nicescroll.js',
-		'node_modules/responsive-nav/responsive-nav.js',
 		'node_modules/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js',
 		'node_modules/simplelightbox/dist/simple-lightbox.min.js',
 		'node_modules/slick-carousel/slick/slick.js',
+		'node_modules/isotope-layout/dist/isotope.pkgd.js',
 
 		// Foundation core - needed if you want to use any of the components below
 		FOUNDATION + '/dist/js/plugins/foundation.core.js',

@@ -161,9 +161,12 @@
 
 
     .newsletter-block-content {
+        color:white!important;
         h2 {
             text-align: center;
         }
+
+        label{color:white!important;}
 
         padding: rem-calc(40 0 20);
         width:90%;

@@ -38,22 +38,19 @@
 			
 	<body <?php body_class(); ?>>
 
+	<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <?php joints_top_nav(); ?>	
+</div>
+
+
 			<div id="header-mobile" class="hide-for-large">
 					
-					<div class="close-menu">
-						<?php if(is_singular('dm_event')) { ?>
-							<a href="<?php echo home_url(); ?>/upcoming-show/"><i class="fas fa-times"></i></a>
-						<?php }	else { ?>		
-							<a href="<?php echo home_url(); ?>"><i class="fas fa-times"></i></a>
-						<?php } ?>
-					</div>
-
-					<nav class="nav-collapse">
-						<?php joints_top_nav(); ?>	
-					</nav>
 					<div class="logo-mobile"><?php if ( function_exists( 'the_custom_logo' ) ) {
 						the_custom_logo();
 					} ?></div>
+
+<span onclick="openNav()"><i class="fa fa-bars"></i></span>
 
 				</div>
 	

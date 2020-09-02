@@ -1,0 +1,81 @@
+{
+    "key": "group_5f4e50f0da171",
+    "title": "size cart",
+    "fields": [
+        {
+            "key": "field_5f4e51ff43013",
+            "label": "taglia unica",
+            "name": "taglia_unica",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f4e521343014",
+            "label": "mostra size cart",
+            "name": "pr_show_sc",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
+            "key": "field_5f4e511659f01",
+            "label": "size cart",
+            "name": "pr_size_cart",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "<table>\r\n  <thead>\r\n    <tr>\r\n      <th>Size<\/th>\r\n      <th>XS<\/th>\r\n      <th>S<\/th>\r\n      <th>M<\/th>\r\n      <th>L<\/th>\r\n      <th>XL<\/th>\r\n    <\/tr>\r\n  <\/thead>\r\n  <tbody>\r\n    <tr>\r\n      <td>BUST<\/td>\r\n      <td>33<\/td>\r\n      <td>33<\/td>\r\n      <td>33<\/td>\r\n      <td>33<\/td>\r\n      <td>33<\/td>\r\n    <\/tr>\r\n    <tr>\r\n      <td>WAIST<\/td>\r\n      <td>29.6<\/td>\r\n      <td>29.6<\/td>\r\n      <td>29.6<\/td>\r\n      <td>29.6<\/td>\r\n      <td>29.6<\/td>\r\n    <\/tr>\r\n    <tr>\r\n      <td>HIPS<\/td>\r\n      <td>37.5<\/td>\r\n      <td>37.5<\/td>\r\n      <td>37.5<\/td>\r\n      <td>37.5<\/td>\r\n      <td>37.5<\/td>\r\n    <\/tr>\r\n  <\/tbody>\r\n<\/table>",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "product"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1598968405
+}

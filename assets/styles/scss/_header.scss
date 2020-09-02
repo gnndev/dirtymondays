@@ -45,48 +45,89 @@
 }
 
 #header-mobile {
-    display: block;
+    display: flex;
     background-color: #000;
+    align-items: center;
+    position: fixed;
+    width:100%;
 
-    .nav-collapse {
-        text-align: center;
-
-    }
+z-index: 1;
 
     .logo-mobile {
-        width: 75%;
-    }
+        flex: 1 1 auto;
 
-    .nav-toggle {
-        
-        display: none;
-        width: 25%;
-        float: right;
-        padding: 20px;
-        text-align: right;
+        img {max-width: 280px;padding:10px;}
     }
+ span{flex: 0 0 40px;
+text-align:center}
 
-    .close-menu {
-        width: 25%;
-        float: right;
-        padding: 20px;
-        text-align: right;
-    }
+    // .close-menu {
+    //     width: 25%;
+    //     float: right;
+    //     padding: 20px;
+    //     text-align: right;
+    // }
 
 }
 
-.home {
-    #header-mobile {
-        .nav-toggle {
-            display: block;
-        }
 
-        .close-menu {
-            display: none;
-        }
+
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 100%; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 2; /* Stay on top */
+    top: 0;
+    right: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    transform: translateX(100%);
+
+    .menu{
+        flex-direction: column;
+
+
+        align-items: center;
+        justify-content: center;
     }
-}
+  }
+  
+  /* The navigation menu links */
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    color:white;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 
-.js .nav-collapse.closed {
-    max-height: 0!important;
-}
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }

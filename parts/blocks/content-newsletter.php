@@ -5,8 +5,11 @@
  * This is the template that displays newsletter box
  */
 
+ // create align class ("alignwide") from block setting ("wide")
+$align_class = $block['align'] ? 'align' . $block['align'] : '';
+
  ?>
- <div id="newsletter-block">
+ <div id="newsletter-block" class="<?php echo $align_class; ?>">
 
  <div class="newsletter-block-content">
      <h2>SUBSCRIBE</h2>
