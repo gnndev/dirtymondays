@@ -28,7 +28,7 @@
 .woocommerce-page {
     clear: both;
     .page-content{
-    padding-top: 20px;
+   
     display: flex;
     background: white;
     color: black;
@@ -139,7 +139,8 @@
         a{display: inline-block;}
 
         img{
-            height: 32px;
+            height: 26px;
+            @include breakpoint(medium){ height: 32px;}
         }
     }
 }
@@ -186,14 +187,24 @@
    border-radius: 0;
     color: #fff;
     border: 2px solid #000;
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight: normal!important;
 }
 .woocommerce #respond input#submit.alt, .woocommerce a.button.alt, .woocommerce button.button.alt, .woocommerce input.button.alt {
     background-color: black;
     color: #fff;
     border-radius: 0;
     border: 2px solid #000;
+    font-size:16px;
+    text-transform: uppercase;
+    font-weight: normal!important;
 }
 
+.woocommerce #respond input#submit, .woocommerce a.button, .woocommerce button.button, .woocommerce input.button
+{font-weight: normal!important;
+
+}
 .woocommerce div.product p.price, .woocommerce div.product span.price {
     color: black;
     font-size: 1.25em;
@@ -231,13 +242,17 @@
     text-align: right;
     z-index: 99;
     position: relative;
+    float: right;
+    padding-top: 10px;
     @include breakpoint(medium){
+        float: none;
         transform: translateY(45px);
 
     }
     a{display: inline-block;}
     img{
-        height: 32px;
+        height: 26px;
+        @include breakpoint(medium){ height: 32px;}
     }
 }
 
@@ -245,8 +260,12 @@
     display: inline-block;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
-    font-size:2rem;
+    font-size:26px;
+    padding-right: 20px;
     text-transform: uppercase;
+    @include breakpoint(medium){
+        font-size:2rem;
+    }
 }
 
 .woocommerce-message {
@@ -275,11 +294,18 @@
  }
 }
 
-.woocommerce span.onsale {
+ .woocommerce span.onsale {
    
     background-color: black; 
     color: white;
    
+}
+
+.single-product.woocommerce span.onsale{
+    display:none;
+    @include breakpoint(medium){
+        display: block;
+    }
 }
 
 #add_payment_method table.cart img, .woocommerce-cart table.cart img, .woocommerce-checkout table.cart img {
@@ -405,5 +431,16 @@ form.woocommerce-checkout{
         grid-column-start: 2;
     grid-column-end: 3;
     }
+    }
+}
+
+button{
+    text-transform: uppercase;
+    font-weight: normal!important;
+}
+
+.woocommerce {
+    h2, h3{
+        text-transform: uppercase;
     }
 }

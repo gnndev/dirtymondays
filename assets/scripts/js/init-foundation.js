@@ -17,9 +17,11 @@ if (window.innerWidth > 1024) {
         document.querySelector('.header').classList.add("opacity");
       }
     } else {
+      if (currentScrollPos > 100) {
       document.querySelector('.header').classList.add("scrolldown");
+      }
     }
-    if (currentScrollPos === 0) {
+    if (currentScrollPos < 100 ) {
       document.querySelector('.header').classList.remove("opacity");
     }
     prevScrollpos = currentScrollPos;

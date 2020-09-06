@@ -20,10 +20,10 @@ get_header(); ?>
 
 	<div id="newsletter-block">
 
-<div class="newsletter-block-content">
-	<h2>SUBSCRIBE</h2>
-	<?php echo do_shortcode('[newsletter_signup_form id=1]'); ?>
-</div>
+		<div class="newsletter-block-content">
+			<h2>SUBSCRIBE</h2>
+			<?php echo do_shortcode('[newsletter_signup_form id=1]'); ?>
+		</div>
 </div>
 
 <?php get_footer(); ?>

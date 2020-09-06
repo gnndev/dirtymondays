@@ -8,6 +8,23 @@ function dirtymondays_add_woocommerce_support() {
 
 add_action( 'after_setup_theme', 'dirtymondays_add_woocommerce_support' );
 
+function my_header_add_to_cart_fragment($fragments)
+{
+    ob_start();
+    $count = WC()->cart->cart_contents_count; ?><a class="cart-contents"
+    href="<?php echo WC()->cart->get_cart_url(); ?>"
+    title="<?php _e('View your shopping cart'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/carrello.png" alt="">
+    <span class="cart-contents-count"><?php echo esc_html($count); ?></span>
+    </a><?php
+ 
+    $fragments['a.cart-contents'] = ob_get_clean();
+     
+    return $fragments;
+}
+add_filter('woocommerce_add_to_cart_fragments', 'my_header_add_to_cart_fragment');
+
+
+
 add_action( 'woocommerce_before_add_to_cart_button', 'dm_add_sizes_cart' );
  
 function dm_add_sizes_cart(){ ?>
@@ -145,4 +162,45 @@ add_filter( 'woocommerce_add_to_cart_redirect', 'bbloomer_redirect_checkout_add_
  
 function bbloomer_redirect_checkout_add_cart() {
    return wc_get_cart_url();
+}
+
+// Single variable produccts pages - Sold out functionality
+add_action( 'woocommerce_single_product_summary', 'replace_single_add_to_cart_button', 1 );
+function replace_single_add_to_cart_button() {
+    global $product;
+
+    // For variable product types
+    if( $product->is_type( 'variable' ) ) {
+        $is_soldout = true;
+        foreach( $product->get_available_variations() as $variation ){
+            if( $variation['is_in_stock'] )
+                $is_soldout = false;
+        }
+        if( $is_soldout ){
+            remove_action( 'woocommerce_single_variation', 'woocommerce_single_variation_add_to_cart_button', 20 );
+            //add_action( 'woocommerce_single_variation', 'sold_out_button', 20 );
+        }
+    }
+}
+
+// The sold_out button replacement
+function sold_out_button() {
+    global $post, $product;
+
+    ?>
+    <div class="woocommerce-variation-add-to-cart variations_button">
+        <?php
+            do_action( 'woocommerce_before_add_to_cart_quantity' );
+
+            woocommerce_quantity_input( array(
+                'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $product->get_min_purchase_quantity(), $product ),
+                'max_value'   => apply_filters( 'woocommerce_quantity_input_max', $product->get_max_purchase_quantity(), $product ),
+                'input_value' => isset( $_POST['quantity'] ) ? wc_stock_amount( $_POST['quantity'] ) : $product->get_min_purchase_quantity(),
+            ) );
+
+            do_action( 'woocommerce_after_add_to_cart_quantity' );
+        ?>
+        <a class="single_sold_out_button button alt disabled wc-variation-is-unavailable"><?php _e( "Sold Out", "woocommerce" ); ?></a>
+    </div>
+    <?php
 }
