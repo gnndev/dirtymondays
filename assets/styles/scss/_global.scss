@@ -10,8 +10,12 @@ Layout
 
 body{
 	overflow-x: hidden;
+	cursor: url(../images/cursore_teschio.png), auto!important;
 }
 
+a{
+	cursor: url(../images/cursore_teschio.png), auto!important;
+}
 .page-content {
 
 	@include breakpoint (medium) {
