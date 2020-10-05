@@ -71,11 +71,12 @@
     margin: 0 auto;
     background-image: url('https://dirtymondays.com/backoffice/wp-content/uploads/2020/08/shop-header.jpg');
     background-attachment: fixed;
-    background-position: 50%;
+    background-position: 80%;
     background-repeat: no-repeat;
     background-size: cover;
     @include breakpoint(medium){
         height: 360px;
+        background-position: 50%;
     }
 }
 

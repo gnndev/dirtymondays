@@ -45,6 +45,7 @@
     "update-foundation": "npm install foundation-sites"
   },
   "dependencies": {
+    "imagesloaded": "^4.1.4",
     "isotope-layout": "^3.0.6",
     "jquery.mb.ytplayer": "^3.2.8",
     "jquery.nicescroll": "^3.7.6",

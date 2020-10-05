@@ -119,12 +119,14 @@ if (accountInstagram){
   })
 }
 
-
-var $grid =jQuery('.products-grid').isotope({
-  // options
-  itemSelector: '.products-grid-item',
-  stamp: '.stamp'
+var $grid = jQuery('.products-grid').imagesLoaded( function() {
+  // init Isotope after all images have loaded
+  $grid.isotope({
+    itemSelector: '.products-grid-item',
+    stamp: '.stamp'
+  });
 });
+
 
 // store filter for each group
 var filters = {};
