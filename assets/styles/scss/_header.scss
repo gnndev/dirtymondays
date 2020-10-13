@@ -21,16 +21,16 @@
         text-transform: uppercase;
     }
 
-    .menu{
+    .menu {
         a {
             text-transform: uppercase;
 
-            &:hover{
+            &:hover {
                 color: $secondary-color;
             }
         }
 
-        .active>a{
+        .active>a {
             color: $secondary-color;
         }
     }
@@ -46,22 +46,33 @@
 }
 
 #header-mobile {
-    top:0;
+    top: 0;
     display: flex;
     background-color: #000;
     align-items: center;
     position: fixed;
-    width:100%;
+    width: 100%;
 
-z-index: 1;
+    z-index: 1;
 
     .logo-mobile {
         flex: 1 1 auto;
 
-        img {max-width: 280px;padding:10px;}
+        img {
+            max-width: 280px;
+            padding: 10px;
+        }
+       
+
     }
- span{flex: 0 0 40px;
-text-align:center}
+
+    span {
+        flex: 0 0 40px;
+        text-align: center;
+        i{
+            font-size: 24px;
+        }
+    }
 
     // .close-menu {
     //     width: 25%;
@@ -77,59 +88,74 @@ text-align:center}
 
 /* The side navigation menu */
 .sidenav {
-    height: 100%; /* 100% Full-height */
-    width: 100%; /* 0 width - change this with JavaScript */
-    position: fixed; /* Stay in place */
-    z-index: 2; /* Stay on top */
+    height: 100%;
+    /* 100% Full-height */
+    width: 100%;
+    /* 0 width - change this with JavaScript */
+    position: fixed;
+    /* Stay in place */
+    z-index: 2;
+    /* Stay on top */
     top: 0;
     right: 0;
-    background-color: #111; /* Black*/
-    overflow-x: hidden; /* Disable horizontal scroll */
-   display: flex;
-   justify-content: center;
-   align-items: center;
-    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    background-color: #111;
+    /* Black*/
+    overflow-x: hidden;
+    /* Disable horizontal scroll */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    /* 0.5 second transition effect to slide in the sidenav */
     transform: translateX(100%);
 
-    .menu{
+    .menu {
         flex-direction: column;
 
 
         align-items: center;
         justify-content: center;
     }
-  }
-  
-  /* The navigation menu links */
-  .sidenav a {
+}
+
+/* The navigation menu links */
+.sidenav a {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
-    font-size: 25px;
+    font-size: 30px;
     color: white;
     display: block;
     transition: 0.3s;
-  }
-  
-  /* When you mouse over the navigation links, change their color */
-  .sidenav a:hover {
+    @include breakpoint(medium){
+        font-size: 25px;
+    }
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
     color: #f1f1f1;
-  }
-  
-  /* Position and style the close button (top right corner) */
-  .sidenav .closebtn {
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
     position: absolute;
     top: 0;
     right: 25px;
-    font-size: 36px;
+    font-size: 54px;
     margin-left: 50px;
-    color:white;
-  }
-  
-  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+    color: white;
+}
 
-  
-  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-  @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
-  }
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}

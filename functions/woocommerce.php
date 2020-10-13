@@ -204,3 +204,17 @@ function sold_out_button() {
     </div>
     <?php
 }
+
+//remove stripe button on sigle page
+add_filter( 'wc_stripe_hide_payment_request_on_product_page', '__return_true' );
+
+//remove continue shopping
+add_filter('wc_add_to_cart_message_html','remove_continue_shoppping_button',10,2);
+
+function remove_continue_shoppping_button($message, $products) {
+    if (strpos($message, 'Continue shopping') !== false) {
+        return preg_replace('/<a.*<\/a>/m','', $message);
+    } else {
+        return $message;
+    }
+}

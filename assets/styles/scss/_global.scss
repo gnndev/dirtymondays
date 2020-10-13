@@ -8,32 +8,39 @@ Stylesheet: Global Stylesheet
 Layout
 *********************/
 
-body{
+body {
 	overflow-x: hidden;
-	cursor: url(../images/cursore.png), auto!important;
+	cursor: url(../images/cursoret.png), auto !important;
 }
 
-a{
-	cursor: url(../images/cursore.png), auto!important;
+a {
+	cursor: url(../images/cursoret.png), auto !important;
 }
+
+select {
+	cursor: url(../images/cursoret.png), auto !important;
+}
+
 .page-content {
 
 	@include breakpoint (medium) {
 		margin-top: 100px;
 	}
-	
+
 }
 
 .single-article {
 	@include breakpoint (medium) {
 		margin-top: 100px;
 	}
-	
+
 }
+
 .content {
 	@include breakpoint (small only) {
 		padding-top: 100px;
 	}
+
 	width: 80%;
 	margin-left: 10%;
 	margin-right: 10%;
@@ -44,28 +51,47 @@ a{
 	@include breakpoint (small only) {
 		padding-top: 100px;
 	}
+
 	clear: both;
 	width: 80%;
-		margin-left: 10%;
-		margin-right: 10%;
-	
+	margin-left: 10%;
+	margin-right: 10%;
+
 
 	@include breakpoint (medium) {
 		width: 50%;
-	margin: 0 auto;
+		margin: 0 auto;
 	}
 }
-.submit-button  {
+
+.submit-button {
 	background-color: $secondary-color;
 
-	&:hover{
+	&:hover {
 		background-color: scale-color($secondary-color, $lightness: -15%);
 	}
 }
 
+.button {
+	cursor: url(../images/cursoret.png), auto !important;
+}
+
+.hollow:hover {
+	background-color: #fefefe !important;
+	color: #000 !important;
+
+	a {
+		color: #000 !important;
+	}
+}
+
+.alignright{
+	text-align: right;
+}
 ::placeholder {
 	color: #333333;
-  }
+}
+
 /*********************
 POSTS & CONTENT STYLES
 *********************/
@@ -96,8 +122,10 @@ POSTS & CONTENT STYLES
 	}
 }
 
-.single-title {margin-top:1rem;
-font-size:2rem;}
+.single-title {
+	margin-top: 1rem;
+	font-size: 2rem;
+}
 
 .alignfull {
 	margin: 0 calc(50% - 50vw);
@@ -578,11 +606,12 @@ body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
 }
 
 /** mailster */
-.mailster-_recaptcha-wrapper{
-	width:1px!important;
-	height: 1px!important;
+.mailster-_recaptcha-wrapper {
+	width: 1px !important;
+	height: 1px !important;
 }
-.mailster-submit-wrapper{
-	width:100%!important;
+
+.mailster-submit-wrapper {
+	width: 100% !important;
 	text-align: center;
 }
