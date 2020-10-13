@@ -14,21 +14,19 @@ get_header(); ?>
 		
                   <article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 
-                        <div class="grid-x grid-pdding-x grid-padding-y grid-margin-x">
-                            <div class="cell small-12 medium-8">
-                                <?php the_content(); ?>
-                            </div>
-
-
-                            <div class="cell small-12 medium-4 single-video-content">
+                        <div class="grid-x grid-padding-x grid-padding-y grid-margin-x">
+                            <div class="cell small-12 medium-12 text-center">
                                 <h4 class="entry-title single-title" itemprop="headline"><?php the_title(); ?></h4>
-                                <div class="more-videos"><a href="<?php echo site_url(); ?>/videos">MORE VIDEO</a></div>
-                            </div>
-
-                            
+                                <div class="video-inner-content">
+                                    <?php the_content(); ?>
+                                </div>
+                               
+                                <div class="text-center">
+                                    <div class="hollow button see-more-btn"><a href="<?php echo site_url(); ?>/videos">MORE VIDEOS</a></div>
+                                </div>
+                            </div>                            
                         </div>
-						
-                                                                        
+						                                                                        
                     </article> <!-- end article -->
 		    	
 		    <?php endwhile; else : ?>

@@ -1,21 +1,8 @@
-.single-video-content {
-    flex-direction: column;
-    justify-content: space-between;
-    display: flex;
+.video-inner-content {
 
-    .single-title {
-         margin-top: 0; 
-    }
+    margin: 32px auto;
 
-    @include breakpoint(medium){
-        justify-content: space-between;
-    }
-
-    .more-videos {
-       
-       @include breakpoint(medium){
-        text-align: right;
-        padding-bottom:15px;
-        }
+    @include breakpoint(medium) {
+        max-width: 65%;
     }
 }
