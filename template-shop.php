@@ -67,7 +67,9 @@ get_header(); ?>
             <?php
                 $args = array(
                     'post_type' => 'product',
-                    'posts_per_page' => -1
+                    'posts_per_page' => -1,
+                    'orderby'        => 'menu_order',
+                    'order' => 'ASC'
                     );
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts() ) {

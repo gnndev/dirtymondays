@@ -1,8 +1,4 @@
 .video-inner-content {
-
-    margin: 32px auto;
-
-    @include breakpoint(medium) {
-        max-width: 65%;
-    }
+   margin-top:60px;
+   margin-bottom: 60px;
 }

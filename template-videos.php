@@ -27,7 +27,7 @@ get_header(); ?>
                        <div class="cell small-12 medium-6">
                            <div class="video box">
                                <a class="video-link" href="<?php the_permalink();?>">
-                                <?php the_post_thumbnail('medium'); ?>
+                                <?php the_post_thumbnail('large'); ?>
                                 <span class="video-caption"><?php the_title();?></span>
                                 </a>
                            </div>

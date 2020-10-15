@@ -6,7 +6,7 @@
 
 get_header(); ?>
 			
-<div class="content single-article" id="single-video-post">
+<div class="small-content single-article" id="single-video-post">
 
 		<main class="main " role="main">
 		

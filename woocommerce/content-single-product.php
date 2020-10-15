@@ -44,7 +44,7 @@ if ( post_password_required() ) {
 	?>
 
 	<div class="summary entry-summary" data-sticky-container>
-<div class="sticky" <?php if (!wp_is_mobile()) : ?> data-sticky data-sticky-on="medium" data-top-anchor="woocommerce-content:top" data-btm-anchor="newsletter-block:top" <?php endif;?>>
+<div class="sticky" <?php if (!wp_is_mobile()) : ?> data-sticky data-sticky-on="medium" data-options="marginTop:2;" data-top-anchor="woocommerce-content:top" data-btm-anchor="newsletter-block:top" <?php endif;?>>
 		<?php
 		/**
 		 * Hook: woocommerce_single_product_summary.

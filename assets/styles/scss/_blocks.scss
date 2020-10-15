@@ -189,7 +189,15 @@
     margin-left: 1rem !important;
 }
 
+// 
 
+.home-cover-image{
+    margin-top:90px;
+
+    @include breakpoint(medium) {
+        margin-top:100px;
+    }
+}
 // 3. video
 #videobg {
     width: 100%;
@@ -197,10 +205,12 @@
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
+   
 
     @include breakpoint(large) {
         height: 85vh;
         padding-bottom: 0;
+      
     }
 
 

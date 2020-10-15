@@ -37,7 +37,7 @@ function dm_add_sizes_cart(){ ?>
 <div class="sizes-cart">
     <ul class="vertical menu accordion-menu" data-accordion-menu>
   <li>
-    <a href="#">SIZE CART</a>
+    <a href="#">SIZE CHART</a>
     <ul class="menu vertical nested">
  <?php the_field('pr_size_cart', get_the_ID()) ;?>
       
@@ -218,3 +218,5 @@ function remove_continue_shoppping_button($message, $products) {
         return $message;
     }
 }
+
+add_action( 'woocommerce_review_order_after_shipping', 'action_woocommerce_review_order_after_shipping');
