@@ -59,6 +59,16 @@ function joints_register_sidebars() {
 		'after_title' => '</h4>',
 	));
 
+	register_sidebar(array(
+		'id' => 'footer5',
+		'name' => __('Footer 5', 'dirtymondays'),
+		'description' => __('The fifth footer sidebar.', 'dirtymondays'),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
 
 	/*
 	to add more sidebars or widgetized areas, just copy

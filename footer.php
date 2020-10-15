@@ -36,7 +36,18 @@
 					<?php endif; ?>
 
 				</div>
-				<div class="cell small-12 medium-6 text-right">
+
+				<div class="cell small-12 medium-2">
+
+					<?php if ( is_active_sidebar( 'footer5' ) ) : ?>
+
+					<?php dynamic_sidebar( 'footer5' ); ?>
+
+					<?php endif; ?>
+
+				</div>
+
+				<div class="cell small-12 medium-4 text-right">
 
 					<?php if ( is_active_sidebar( 'footer4' ) ) : ?>
 
