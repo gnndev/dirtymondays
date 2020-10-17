@@ -80,9 +80,9 @@
 }
 
 .products-header {
+    margin: 0 auto;
     height: 500px;
     max-width: 1920px;
-    margin: 0 auto;
     background-image: url('https://dirtymondays.com/backoffice/wp-content/uploads/2020/08/shop-header.jpg');
     background-attachment: fixed;
     background-position: 80%;
@@ -637,4 +637,29 @@ textarea {
 
 .is-accordion-submenu table td {
     padding-left: .625rem!important;
+}
+
+.woocommerce-cart, .woocommerce-checkout{
+/* Input field */
+.select2-selection__rendered {  }
+    
+/* Around the search field */
+.select2-search {  }
+    
+/* Search field */
+.select2-search input {  }
+    
+/* Each result */
+.select2-results {color:black;
+  }
+    
+/* Higlighted (hover) result */
+.select2-results__option--highlighted {  
+    color:white;
+    background:black;
+}
+    
+/* Selected option */
+.select2-results__option[aria-selected=true] {  }
+
 }
