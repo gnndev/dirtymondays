@@ -80,18 +80,17 @@
 }
 
 .products-header {
-    margin: 0 auto;
-    height: 500px;
-    max-width: 1920px;
-    background-image: url('https://dirtymondays.com/backoffice/wp-content/uploads/2020/08/shop-header.jpg');
-    background-attachment: fixed;
-    background-position: 80%;
+    margin-top:90px;
+    background-position: center;
+    padding-top: 99.07%;
+    background-image: url('https://dirtymondays.com/backoffice/wp-content/uploads/2020/10/DIRTYMONDAYS_shop_cover_mobile_3DEF.jpg');
     background-repeat: no-repeat;
     background-size: cover;
 
     @include breakpoint(medium) {
-        height: 360px;
-        background-position: 50%;
+        margin-top:100px;
+        background-image: url('https://dirtymondays.com/backoffice/wp-content/uploads/2020/10/DIRTYMONDAYS_shop_cover_6DEF.jpg');
+        padding-top: 23.80%;
     }
 }
 
