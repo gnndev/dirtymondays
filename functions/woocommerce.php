@@ -220,3 +220,12 @@ function remove_continue_shoppping_button($message, $products) {
 }
 
 add_action( 'woocommerce_review_order_after_shipping', 'action_woocommerce_review_order_after_shipping');
+
+
+// define the wpo_wcpdf_invoice_title callback 
+function filter_wpo_wcpdf_invoice_title( $var ) { 
+    return __( 'Receipt/Proforma', 'woocommerce-pdf-italian-add-on' ); 
+}; 
+         
+// add the filter 
+add_filter( 'wpo_wcpdf_receipt_title', 'filter_wpo_wcpdf_invoice_title', 10, 1 ); 
