@@ -94,6 +94,16 @@
     }
 }
 
+.products-hero {
+    margin-top:90px;
+    img {
+        width: 100%;
+    }
+    @include breakpoint(medium) {
+        margin-top:100px; 
+    }
+}
+
 .products-bar {
     margin-top: 50px;
     margin-bottom: 50px;

@@ -8,7 +8,14 @@ get_header(); ?>
 
 
 <div class="page-content custom-shop">
+    <?php if (get_field('cover', 'option')): ?>
+    <div class="products-hero">
+        <img class="show-for-medium" src="<?php echo get_field('cover', 'option') ; ?>">
+        <img class="show-for-small-only" src="<?php echo get_field('cover_mob', 'option') ;?>">
+    </div>
+    <?php else: ?>
     <div class="products-header"></div>
+    <?php endif; ?>
     <div class="content" style="padding-top:0">
         <div class="products-bar">
             <h2>Shop</h4>

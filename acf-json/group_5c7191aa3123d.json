@@ -11,13 +11,38 @@
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
-                "width": "",
+                "width": "50",
                 "class": "",
                 "id": ""
             },
             "display_format": "d\/m\/Y",
-            "return_format": "D F d",
+            "return_format": "Ymd",
             "first_day": 1
+        },
+        {
+            "key": "field_61a3b20ffed0d",
+            "label": "Fuso orario",
+            "name": "fuso_orario",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "Milano": "Milano",
+                "LosAngeles": "LosAngeles"
+            },
+            "default_value": false,
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": ""
         },
         {
             "key": "field_5c71922a2c175",
@@ -51,7 +76,9 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": "",
+            "post_type": [
+                "dm_rsvp"
+            ],
             "taxonomy": "",
             "allow_null": 0,
             "allow_archives": 1,
@@ -73,7 +100,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1551043304
+    "modified": 1638136314
 }

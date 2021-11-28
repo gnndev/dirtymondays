@@ -39,6 +39,8 @@ select {
 .content {
 	@include breakpoint (small only) {
 		padding-top: 100px;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
 	}
 
 	width: 80%;

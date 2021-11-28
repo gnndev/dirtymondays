@@ -125,3 +125,24 @@ function redirect_to_upcomingshow() {
         exit;
     }
 }
+
+
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'DM Settings',
+		'menu_title'	=> 'DM Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+	
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'DM shop Settings',
+		'menu_title'	=> 'shop',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+	
+	
+}

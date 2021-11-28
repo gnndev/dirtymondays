@@ -26,7 +26,8 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
         $args = array(
             'post_type' => 'product',
             'posts_per_page' => 4,
-            'order' => 'DESC'
+            'orderby'        => 'menu_order',
+            'order' => 'ASC'
             );
         $loop = new WP_Query( $args );
         if ( $loop->have_posts() ) {

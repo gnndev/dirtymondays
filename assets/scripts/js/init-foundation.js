@@ -57,10 +57,16 @@ if (loads) {
       var url = load.dataset.url;
       jQuery('#overlay').load(url + ' .main ', function () {
         jQuery('.tabs').foundation();
-      }).niceScroll({
+        jQuery("#overlay").getNiceScroll().remove()
+      }).on('change.zf.tabs', function() {
+        jQuery("#overlay").getNiceScroll().remove()
+        
+        jQuery('#overlay').niceScroll({
         cursorcolor: "black",
         cursorborder: "1px solid black",
       });
+
+});
 
     })
   });
