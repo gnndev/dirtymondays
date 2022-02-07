@@ -12,7 +12,7 @@ function my_header_add_to_cart_fragment($fragments)
 {
     ob_start();
     $count = WC()->cart->cart_contents_count; ?><a class="cart-contents"
-    href="<?php echo WC()->cart->get_cart_url(); ?>"
+    href="<?php echo wc_get_cart_url(); ?>"
     title="<?php _e('View your shopping cart'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/carrello.png" alt="">
     <span class="cart-contents-count"><?php echo esc_html($count); ?></span>
     </a><?php
@@ -57,7 +57,7 @@ function dm_add_cart_to_single_product(){ ?>
 
 <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
     $count = WC()->cart->cart_contents_count; ?><a class="cart-contents"
-    href="<?php echo WC()->cart->get_cart_url(); ?>"
+    href="<?php echo wc_get_cart_url(); ?>"
     title="<?php _e('View your shopping cart'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/carrello.png" alt="">
                         <span class="cart-contents-count"><?php echo esc_html($count); ?></span>
                         </a><?php
