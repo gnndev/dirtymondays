@@ -44,43 +44,43 @@ if (window.innerWidth > 1024) {
 
 // popup events page
 
-var loads = document.querySelectorAll('.load');
-var overlayContainer = document.getElementById('overlay-container');
-var overlay = document.getElementById('overlay');
-var close = document.querySelector('.close-icon');
-if (loads) {
-  loads.forEach(function (load) {
-    load.addEventListener('click', function (e) {
-      e.preventDefault;
-      overlayContainer.style.display = 'flex';
-      document.body.style.overflowY = 'hidden';
-      var url = load.dataset.url;
-      jQuery('#overlay').load(url + ' .main ', function () {
-        jQuery('.tabs').foundation();
-        jQuery("#overlay").getNiceScroll().remove()
-      }).on('change.zf.tabs', function() {
-        jQuery("#overlay").getNiceScroll().remove()
+// var loads = document.querySelectorAll('.load');
+// var overlayContainer = document.getElementById('overlay-container');
+// var overlay = document.getElementById('overlay');
+// var close = document.querySelector('.close-icon');
+// if (loads) {
+//   loads.forEach(function (load) {
+//     load.addEventListener('click', function (e) {
+//       e.preventDefault;
+//       overlayContainer.style.display = 'flex';
+//       document.body.style.overflowY = 'hidden';
+//       var url = load.dataset.url;
+//       jQuery('#overlay').load(url + ' .main ', function () {
+//         jQuery('.tabs').foundation();
+//         jQuery("#overlay").getNiceScroll().remove()
+//       }).on('change.zf.tabs', function() {
+//         jQuery("#overlay").getNiceScroll().remove()
         
-        jQuery('#overlay').niceScroll({
-        cursorcolor: "black",
-        cursorborder: "1px solid black",
-      });
+//         jQuery('#overlay').niceScroll({
+//         cursorcolor: "black",
+//         cursorborder: "1px solid black",
+//       });
 
-});
+// });
 
-    })
-  });
+//     })
+//   });
 
 
-}
+// }
 
-if (close) {
-  close.addEventListener('click', function () {
-    overlayContainer.style.display = 'none';
-    document.body.style.overflowY = 'scroll';
-    overlay.innerHTML = '<div class="spinner text-center"><i class="fas fa-spinner fa-spin  fa-4x"></i></div>';
-  })
-}
+// if (close) {
+//   close.addEventListener('click', function () {
+//     overlayContainer.style.display = 'none';
+//     document.body.style.overflowY = 'scroll';
+//     overlay.innerHTML = '<div class="spinner text-center"><i class="fas fa-spinner fa-spin  fa-4x"></i></div>';
+//   })
+// }
 
 //carousel block
 jQuery('.slick-carousel').slick({

@@ -5,7 +5,7 @@
 
 get_header(); ?>
 			
-	<div class="page-content">
+	<div class="page-content small-content">
 	
 		    <main class="main" role="main">
 				
