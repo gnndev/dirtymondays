@@ -35,12 +35,17 @@
 }
 
 #event-block {
-
+    @include breakpoint(medium) {
+    width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	clear: both;
+    }
     padding-bottom: rem-calc(80);
 
     h2 {
         text-align: center;
-        padding: rem-calc(16 16 32);
+        padding: rem-calc(16 16 0);
 
         @include breakpoint(medium) {
             padding: rem-calc(50 16);
@@ -48,12 +53,15 @@
     }
 
     .block-event-single {
+        align-items: center;
         text-transform: uppercase;
-        padding: rem-calc(16 16);
+        padding: rem-calc(16 16 32);
+        @include breakpoint (medium) {
+            padding: rem-calc(16 16);
+        }
     }
 
     .hollow {
-        margin-left: 1rem;
 
         &:hover {
             background-color: $white;
@@ -61,23 +69,40 @@
         }
     }
 
+    .button.rsvp{
+        border: 1px solid white;
+        color: $black;
+        margin-top: 10px;
+        padding: 0.65em 0.7em;
+        font-size: rem-calc(18);
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+
     .block-event-field {
         text-align: center;
-        margin-top: .3rem;
+        margin-top: 0;
 
         @include breakpoint(medium) {
             text-align: left;
-            margin-top: 0;
         }
     }
 
     .block-event-date {
-        font-weight: bold;
+        font-weight: normal;
+        font-size: rem-calc(18);
+
+        @include breakpoint(medium) {
+            font-size: rem-calc(16);
+        }
     }
 
 
     .block-event-title {
-        font-weight: bold;
+        font-weight: bolder;
+        font-size: rem-calc(23);
     }
 
     .block-event-btn {
@@ -214,6 +239,7 @@
 }
 // 3. video
 #videobg {
+    margin-top: 86px;
     width: 100%;
     padding-bottom: 56.25%;
     position: relative;
@@ -222,6 +248,7 @@
    
 
     @include breakpoint(large) {
+        margin-top: 100px;
         height: 85vh;
         padding-bottom: 0;
       

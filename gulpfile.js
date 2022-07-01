@@ -26,8 +26,8 @@ const SOURCE = {
 		'node_modules/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.js',
 		'node_modules/simplelightbox/dist/simple-lightbox.min.js',
 		'node_modules/slick-carousel/slick/slick.js',
-		'node_modules/imagesloaded/imagesloaded.pkgd.js',
-		'node_modules/isotope-layout/dist/isotope.pkgd.js',
+		// 'node_modules/imagesloaded/imagesloaded.pkgd.js',
+		// 'node_modules/isotope-layout/dist/isotope.pkgd.js',
 
 		// Foundation core - needed if you want to use any of the components below
 		FOUNDATION + '/dist/js/plugins/foundation.core.js',

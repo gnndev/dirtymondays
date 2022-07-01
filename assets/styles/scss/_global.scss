@@ -41,19 +41,31 @@ select {
 		padding-top: 100px;
 		margin-bottom: 40px;
 		padding-bottom: 40px;
+		width: 90%;
+		margin-left: 5%;
+		margin-right: 5%;
 	}
-
+	
 	width: 80%;
 	margin-left: 10%;
 	margin-right: 10%;
 	clear: both;
 }
-
-.small-content {
+.type-dm_event{
 	@include breakpoint (small only) {
-		padding-top: 100px;
+		padding-top: 0px;
 	}
+}
 
+.nf-form-content .privacy-checkbox label {
+	font-size: 16px;
+	font-weight: 400;
+	@include breakpoint (small only) {
+		margin-top: 16px!important;
+	}
+}
+.small-content {
+	padding-top: 100px;
 	clear: both;
 	width: 80%;
 	margin-left: 10%;
@@ -84,6 +96,23 @@ select {
 
 	a {
 		color: #000 !important;
+	}
+}
+
+.nf-form-content .ninja-forms-field.button{
+	background: $secondary-color;
+	color: $white;
+	&:hover {
+		background-color: scale-color($secondary-color, $lightness: -15%);
+		color: $white!important;
+	}
+}
+
+.button-center {
+	text-align: center;
+	@include breakpoint (medium) {
+		text-align: left;
+
 	}
 }
 
@@ -125,8 +154,22 @@ POSTS & CONTENT STYLES
 }
 
 .single-title {
+	
 	margin-top: 1rem;
 	font-size: 2rem;
+}
+
+.text-uppercase {
+	text-transform: uppercase;
+}
+
+.negative-margin {
+	margin: 0 -20px;
+	@include breakpoint (medium) {
+		margin: unset;
+	}
+
+
 }
 
 .alignfull {

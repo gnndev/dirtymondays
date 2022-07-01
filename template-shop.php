@@ -22,7 +22,7 @@ get_header(); ?>
                 <div>
                     <div class="products-filters">
 
-                        <p>FILTER</p>
+                        <p>FILTER CATEGORIES</p>
 
                         <div class="ui-group">
                             <select class="filter-select" value-group="categories">
@@ -48,7 +48,7 @@ get_header(); ?>
                             
                             $all_categories = get_categories( $args );
                         foreach ($all_categories as $cat) {
-                        echo ' <option value=".'.$cat->slug .'">'.$cat->name.'</option>';
+                        echo ' <option value="'.$cat->slug .'">'.$cat->name.'</option>';
                         } ?>
                             </select>
                         </div>
@@ -70,7 +70,6 @@ get_header(); ?>
         </div>
 
         <div class="products products-grid">
-            <div class="stamp"></div>
             <?php
                 $args = array(
                     'post_type' => 'product',
@@ -87,7 +86,7 @@ get_header(); ?>
                         echo  $term->slug;
                     }?>">
                 <a href="<?php the_permalink(); ?>"
-                    class="<?php echo (!$product->is_in_stock()) ? 'sold-out' : 'in-stock';?>"><?php the_post_thumbnail('large'); ?></a>
+                    class="<?php echo (!$product->is_in_stock()) ? 'sold-out' : 'in-stock';?>"><?php the_post_thumbnail('woocommerce_thumbnail'); ?></a>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                 <p>

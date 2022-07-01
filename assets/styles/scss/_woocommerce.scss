@@ -186,36 +186,30 @@
 .products-grid {
     position: relative;
     text-transform: uppercase;
+    display: flex;
+    flex-wrap: wrap;
 
-    .stamp {
-        position: absolute;
-        width: 50%;
-        top: 0;
-        left: 50%;
-        height: 0;
-        background-color: transparent;
-
-        @include breakpoint(medium) {
-            height: 300px;
-        }
-    }
 }
 
 .products-grid-item {
     text-align: center;
-    margin-left: 5%;
-    margin-right: 5%;
-    margin-bottom: 30px;
-    width: 90%;
+    margin: 12px 12px 25px;
+    width: calc(50% - 24px);
+    
 
     @include breakpoint(medium) {
-        width: 40%;
-        margin-bottom: 100px;
+        width: calc(25% - 24px);
+        margin: 12px 12px 25px;
     }
 
     h2 {
+        margin-top: 15px;
+        margin-bottom: 5px;
+        font-size: rem-calc(12);
+    }
 
-        font-size: rem-calc(24);
+    p{
+        font-size: rem-calc(12);
     }
 }
 
@@ -431,8 +425,8 @@
 }
 
 .quantity {
+    display: flex;
     @include breakpoint(small only) {
-        display: flex;
         justify-content: flex-end;
     }
 
@@ -452,6 +446,7 @@
 }
 
 .woocommerce div.product form.cart .button {
+    margin-top: 16px;
     margin-bottom: 30px;
     clear: left;
 
@@ -671,4 +666,37 @@ textarea {
 /* Selected option */
 .select2-results__option[aria-selected=true] {  }
 
+}
+
+.woocommerce div.product form.cart .variations td, .woocommerce div.product form.cart .variations th {
+    padding-left: 0;
+    text-align: left;}
+
+
+button.minus {
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 5px;
+    border-right: 0;
+}
+
+button.plus {
+    cursor: pointer;
+    border-radius: 0;
+    border: 1px solid black;
+    padding: 5px;
+    border-left: 0;
+}
+
+.quantity input[type=number]::-webkit-inner-spin-button,
+.quantity  input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.quantity{
+    .qty{
+        margin-bottom: 0;
+    }
 }

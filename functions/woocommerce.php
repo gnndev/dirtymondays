@@ -67,7 +67,7 @@ function dm_add_cart_to_single_product(){ ?>
     <?php
 }
 
-add_action('add_to_cart_redirect', 'resolve_dupes_add_to_cart_redirect');
+add_action('woocommerce_add_to_cart_redirect ', 'resolve_dupes_add_to_cart_redirect');
 
 function resolve_dupes_add_to_cart_redirect($url = false)
 {
@@ -219,7 +219,6 @@ function remove_continue_shoppping_button($message, $products) {
     }
 }
 
-add_action( 'woocommerce_review_order_after_shipping', 'action_woocommerce_review_order_after_shipping');
 
 
 // define the wpo_wcpdf_invoice_title callback 
@@ -229,3 +228,65 @@ function filter_wpo_wcpdf_invoice_title( $var ) {
          
 // add the filter 
 add_filter( 'wpo_wcpdf_receipt_title', 'filter_wpo_wcpdf_invoice_title', 10, 1 ); 
+
+
+/**
+ * @snippet       Plus Minus Quantity Buttons @ WooCommerce Product Page & Cart
+ * @how-to        Get CustomizeWoo.com FREE
+ * @author        Rodolfo Melogli
+ * @compatible    WooCommerce 5
+ * @donate $9     https://businessbloomer.com/bloomer-armada/
+ */
+  
+// -------------
+// 1. Show plus minus buttons
+  
+add_action( 'woocommerce_after_quantity_input_field', 'bbloomer_display_quantity_plus' );
+  
+function bbloomer_display_quantity_plus() {
+   echo '<button type="button" class="plus">+</button>';
+}
+  
+add_action( 'woocommerce_before_quantity_input_field', 'bbloomer_display_quantity_minus' );
+  
+function bbloomer_display_quantity_minus() {
+   echo '<button type="button" class="minus">-</button>';
+}
+  
+// -------------
+// 2. Trigger update quantity script
+  
+add_action( 'wp_footer', 'bbloomer_add_cart_quantity_plus_minus' );
+  
+function bbloomer_add_cart_quantity_plus_minus() {
+ 
+   if ( ! is_product() && ! is_cart() ) return;
+    
+   wc_enqueue_js( "   
+           
+      $(document).on( 'click', 'button.plus, button.minus', function() {
+  
+         var qty = $( this ).parent( '.quantity' ).find( '.qty' );
+         var val = parseFloat(qty.val());
+         var max = parseFloat(qty.attr( 'max' ));
+         var min = parseFloat(qty.attr( 'min' ));
+         var step = parseFloat(qty.attr( 'step' ));
+ 
+         if ( $( this ).is( '.plus' ) ) {
+            if ( max && ( max <= val ) ) {
+               qty.val( max ).change();
+            } else {
+               qty.val( val + step ).change();
+            }
+         } else {
+            if ( min && ( min >= val ) ) {
+               qty.val( min ).change();
+            } else if ( val > 1 ) {
+               qty.val( val - step ).change();
+            }
+         }
+ 
+      });
+        
+   " );
+}

@@ -34,7 +34,7 @@
             },
             "choices": {
                 "Milano": "Milano",
-                "LosAngeles": "LosAngeles"
+                "LosAngeles": "Los Angeles"
             },
             "default_value": false,
             "allow_null": 0,
@@ -102,5 +102,6 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1638136314
+    "show_in_rest": 0,
+    "modified": 1648813152
 }

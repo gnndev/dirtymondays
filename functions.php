@@ -51,3 +51,16 @@ require_once(get_template_directory().'/functions/translation/translation.php');
 require_once(get_template_directory().'/functions/blocks.php'); 
 
 require_once(get_template_directory().'/functions/woocommerce.php'); 
+
+require_once(get_template_directory().'/functions/email-template.php'); 
+
+// function mailtrap($phpmailer) {
+//     $phpmailer->isSMTP();
+//     $phpmailer->Host = 'smtp.mailtrap.io';
+//     $phpmailer->SMTPAuth = true;
+//     $phpmailer->Port = 2525;
+//     $phpmailer->Username = '81f4b6004e8b1b';
+//     $phpmailer->Password = '8c97ef2593a907';
+//   }
+  
+//   add_action('phpmailer_init', 'mailtrap');

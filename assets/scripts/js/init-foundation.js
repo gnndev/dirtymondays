@@ -124,39 +124,37 @@ if (accountInstagram){
     e.target.value = "@";
   })
 }
+// var NoneMode = Isotope.LayoutMode.create('none');
+// var $grid = jQuery('.products-grid').imagesLoaded( function() {
+//   // init Isotope after all images have loaded
+//   $grid.isotope({
+//     itemSelector: '.products-grid-item',
+//     layoutMode: 'none'
+//   });
+// });
 
-var $grid = jQuery('.products-grid').imagesLoaded( function() {
-  // init Isotope after all images have loaded
-  $grid.isotope({
-    itemSelector: '.products-grid-item',
-    stamp: '.stamp'
-  });
-});
 
+// // store filter for each group
 
-// store filter for each group
-var filters = {};
 
 jQuery('.products-filters').on( 'change', function( event ) {
   var $select = jQuery( event.target );
   // get group key
-  var filterGroup = $select.attr('value-group');
   // set filter for group
-  filters[ filterGroup ] = event.target.value;
+  var filter = event.target.value;
   // combine filters
-  var filterValue = concatValues( filters );
+  //jQuery('.products-grid-item').show();
+  jQuery( '.products-grid-item' ).each(function( index ) {
+    if(jQuery( this ).hasClass(filter) || '' === filter) {
+      jQuery( this ).show();
+    } else {
+      jQuery( this ).hide();
+    }
+    
+  });
   // set filter for Isotope
-  $grid.isotope({ filter: filterValue });
+ // $grid.isotope({ filter: filterValue });
 });
-
-// flatten object by concatting values
-function concatValues( obj ) {
-  var value = '';
-  for ( var prop in obj ) {
-    value += obj[ prop ];
-  }
-  return value;
-}
 
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
