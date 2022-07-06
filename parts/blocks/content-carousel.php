@@ -36,7 +36,7 @@ $align_class = $block['align'] ? 'align' . $block['align'] : '';
 
             <div class="single-slide">
                 <a href="<?php the_permalink(); ?>"
-                    class="<?php echo (!$product->is_in_stock()) ? 'sold-out' : 'in-stock';?>"><?php the_post_thumbnail('large'); ?></a>
+                    class="<?php echo (!$product->is_in_stock()) ? 'sold-out' : 'in-stock';?>"><?php the_post_thumbnail('woocommerce_thumbnail'); ?></a>
                 <h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
                 <p>
                     <?php echo ( $product->is_in_stock() ) ? $product->get_price_html() : '<span class="sold-out-color">Sold out</span>';?>

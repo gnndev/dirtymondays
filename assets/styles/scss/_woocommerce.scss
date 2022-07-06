@@ -5,10 +5,12 @@
 
     a {
         color: black;
+        font-weight: 600;
     }
 
     label {
         color: black;
+        font-weight: 600;
     }
 
 
@@ -462,6 +464,7 @@
 }
 
 .woocommerce div.product {
+    margin-top: 42px;
     display: flex;
     flex-wrap: wrap;
 
@@ -698,5 +701,24 @@ button.plus {
 .quantity{
     .qty{
         margin-bottom: 0;
+    }
+}
+
+.added_to_cart.wc-forward{
+    display: none!important;
+}
+
+.bag-icon{
+    margin-left: auto;
+    cursor: pointer;
+    margin-right: 8px;
+    .xoo-wscb-icon {
+        font-size: 21px;
+    }
+
+    .xoo-wscb-count{
+        font-size: 9px;
+        height: 25px;
+        line-height: 25px;
     }
 }

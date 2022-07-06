@@ -54,18 +54,6 @@ get_header(); ?>
                         </div>
 
                     </div>
-                    <div class="carrello">
-
-                        <?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-                            $count = WC()->cart->cart_contents_count; ?><a class="cart-contents"
-                            href="<?php echo wc_get_cart_url(); ?>"
-                            title="<?php _e('View your shopping cart'); ?>"><img
-                                src="<?php echo get_template_directory_uri(); ?>/assets/images/carrello.png" alt="">
-                            <span class="cart-contents-count"><?php echo esc_html($count); ?></span>
-                        </a><?php
-                    } ?>
-
-                    </div>
                 </div>
         </div>
 

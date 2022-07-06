@@ -61,7 +61,16 @@
 						the_custom_logo();
 					} ?></div>
 
-<span onclick="openNav()"><i class="fa fa-bars"></i></span>
+					<a class="bag-icon cart-contents" href="<?php echo wc_get_cart_url(); ?>"  title="<?php _e('View your shopping cart'); ?>">
+						<div class="xoo-wsch-basket" style="position:relative"><?php
+						$count = WC()->cart->cart_contents_count; ?> 
+							<span class="xoo-wscb-icon xoo-wsc-icon-bag2"></span>
+								<span class="xoo-wscb-count"><?php echo esc_html($count); ?></span>
+						
+						</div>
+					</a>
+
+					<span onclick="openNav()"><i class="fa fa-bars"></i></span>
 
 				</div>
 	
@@ -71,7 +80,14 @@
 						the_custom_logo();
 					} ?>
 				</div>
-			
+				<a class="bag-icon cart-contents" href="<?php echo wc_get_cart_url(); ?>"  title="<?php _e('View your shopping cart'); ?>">
+					<div class="xoo-wsch-basket" style="position:relative"><?php
+					$count = WC()->cart->cart_contents_count; ?> 
+						<span class="xoo-wscb-icon xoo-wsc-icon-bag2"></span>
+							<span class="xoo-wscb-count"><?php echo esc_html($count); ?></span>
+					
+					</div>
+				</a>
 				<div class="nav-menu show-for-large"><?php joints_top_nav(); ?></div>
 				
 	

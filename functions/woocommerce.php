@@ -11,10 +11,14 @@ add_action( 'after_setup_theme', 'dirtymondays_add_woocommerce_support' );
 function my_header_add_to_cart_fragment($fragments)
 {
     ob_start();
-    $count = WC()->cart->cart_contents_count; ?><a class="cart-contents"
+    $count = WC()->cart->cart_contents_count; ?><a class="bag-icon cart-contents"
     href="<?php echo wc_get_cart_url(); ?>"
-    title="<?php _e('View your shopping cart'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/carrello.png" alt="">
-    <span class="cart-contents-count"><?php echo esc_html($count); ?></span>
+    title="<?php _e('View your shopping cart'); ?>"><div class="xoo-wsch-basket" style="position:relative"><?php
+					$count = WC()->cart->cart_contents_count; ?> 
+						<span class="xoo-wscb-icon xoo-wsc-icon-bag2"></span>
+							<span class="xoo-wscb-count"><?php echo esc_html($count); ?></span>
+					
+					</div>
     </a><?php
  
     $fragments['a.cart-contents'] = ob_get_clean();
@@ -49,23 +53,6 @@ function dm_add_sizes_cart(){ ?>
 <?php endif; ?>
 <?php }
 
-
-add_action( 'woocommerce_before_single_product', 'dm_add_cart_to_single_product' );
- 
-function dm_add_cart_to_single_product(){ ?>
-<div class="single-carrello">
-
-<?php if (in_array('woocommerce/woocommerce.php', apply_filters('active_plugins', get_option('active_plugins')))) {
-    $count = WC()->cart->cart_contents_count; ?><a class="cart-contents"
-    href="<?php echo wc_get_cart_url(); ?>"
-    title="<?php _e('View your shopping cart'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/carrello.png" alt="">
-                        <span class="cart-contents-count"><?php echo esc_html($count); ?></span>
-                        </a><?php
-} ?>
-
-</div>
-    <?php
-}
 
 add_action('woocommerce_add_to_cart_redirect ', 'resolve_dupes_add_to_cart_redirect');
 
@@ -158,7 +145,7 @@ function ts_product_image_on_checkout( $name, $cart_item, $cart_item_key ) {
     return $image . $name;
 }
 
-add_filter( 'woocommerce_add_to_cart_redirect', 'bbloomer_redirect_checkout_add_cart' );
+//add_filter( 'woocommerce_add_to_cart_redirect', 'bbloomer_redirect_checkout_add_cart' );
  
 function bbloomer_redirect_checkout_add_cart() {
    return wc_get_cart_url();
@@ -209,9 +196,9 @@ function sold_out_button() {
 add_filter( 'wc_stripe_hide_payment_request_on_product_page', '__return_true' );
 
 //remove continue shopping
-add_filter('wc_add_to_cart_message_html','remove_continue_shoppping_button',10,2);
+add_filter('wc_add_to_cart_message_html','remove_continue_shopping_button',10,2);
 
-function remove_continue_shoppping_button($message, $products) {
+function remove_continue_shopping_button($message, $products) {
     if (strpos($message, 'Continue shopping') !== false) {
         return preg_replace('/<a.*<\/a>/m','', $message);
     } else {
