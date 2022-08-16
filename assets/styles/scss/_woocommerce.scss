@@ -722,3 +722,87 @@ button.plus {
         line-height: 25px;
     }
 }
+
+.woocommerce table.shop_table_responsive tr, .woocommerce-page table.shop_table_responsive tr{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 1rem;
+    @include breakpoint(large) {
+        display: table-row;
+    }
+}
+.woocommerce-cart-form__cart-item.cart_item td::before{
+    content: ""!important;
+}
+
+
+.cart .dm-cart-product-thumbnail{
+        flex: 0 0 auto;
+        max-width: 80px;
+        @include breakpoint(large) {
+            max-width: 150px;
+            width: 150px;
+        }
+         img {
+            max-width: 100%;
+         }
+    }
+    .cart .product-name{
+        flex: 1 1 auto;
+    }
+    .cart .product-cart-variations{
+        color: gray;
+        font-size: 12px;
+        margin-bottom: 0;
+    }
+
+    .cart .product-remove{
+        margin-left: auto;
+        width: 48px;
+    }
+
+    .cart .product-subtotal{
+        flex: 0 0 auto;
+        margin-left: auto;
+    }
+
+    .woocommerce-cart .woocommerce table.shop_table td{
+        padding: 9px 7px;
+        border-top: 0!important;
+    }
+
+    .woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
+        border-top: 1px solid rgba(0,0,0,.1)!important;
+        width: 100%;
+
+        >button{
+            float: right;
+        }
+    }
+.woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td{
+    background-color: white!important;
+    text-align: left!important;
+}
+
+.woocommerce-cart-form{
+    @include breakpoint(large) {
+        float: left;
+    width:55%}
+}
+.woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals{
+    @include breakpoint(large) {
+        float: right;
+    width:40%}
+}
+.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+    width: 100%;
+}
+
+.woocommerce ul#shipping_method li label {
+    display: inline-block;
+}
+
+.woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before{
+    margin-right: 5px;
+}
