@@ -94,6 +94,15 @@ function my_acf_init() {
 			'icon'				=> 'clipboard',
 			'keywords'			=> array( 'carousel', 'dirtymondays' ),
         ));
+		acf_register_block(array(
+			'name'				=> 'image-btn',
+			'title'				=> __('Image with button'),
+			'description'		=> __('bg image with button'),
+            'render_callback'	=> 'my_acf_block_render_callback',
+			'category'			=> 'layout',
+			'icon'				=> 'clipboard',
+			'keywords'			=> array( 'image', 'dirtymondays' ),
+        ));
 	}
 }
 
