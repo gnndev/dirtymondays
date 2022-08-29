@@ -26,15 +26,14 @@ global $product;
 
 
 $post_thumbnail_id = $product->get_image_id();
-
-?>
+$attachment_ids = $product->get_gallery_image_ids(); ?>
 <div class="woocommerce-product-gallery images">
-	<figure class="woocommerce-product-gallery__wrapper">
+	<figure class="woocommerce-product-gallery__wrapper desktop-thumbnails">
 		<?php
 		if ( $product->get_image_id() ) {
 			$html = wc_get_gallery_image_html( $post_thumbnail_id, true );
 		} else {
-			$html  = '<div class="woocommerce-product-gallery__image--placeholder">';
+			$html  = '<div class="woocommerce-product-gallery__image--placeholder ">';
 			$html .= sprintf( '<img src="%s" alt="%s" class="wp-post-image" />', esc_url( wc_placeholder_img_src( 'woocommerce_single' ) ), esc_html__( 'Awaiting product image', 'woocommerce' ) );
 			$html .= '</div>';
 		}
@@ -44,4 +43,16 @@ $post_thumbnail_id = $product->get_image_id();
 		do_action( 'woocommerce_product_thumbnails' );
 		?>
 	</figure>
+	<div class="mobile-thumbnails">
+		<?php the_title( '<h1 class="mobile_product_title entry-title">', '</h1>' ); ?>
+		<div class="single-item ">
+		<?php
+			echo '<div class="single-slide">'. wp_get_attachment_image( $product->get_image_id(), 'full'  ) .'</div>'; // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+			if ( $attachment_ids && $product->get_image_id() ) {
+				foreach ( $attachment_ids as $attachment_id ) {
+					echo '<div class="single-slide">'. wp_get_attachment_image( $attachment_id, 'full'  ) .'</div>'; // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
+				}
+			} ?>
+		</div>
+	</div>
 </div>

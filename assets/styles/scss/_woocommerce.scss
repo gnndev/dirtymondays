@@ -342,7 +342,7 @@
 }
 
 .woocommerce div.product .product_title {
-    display: inline-block;
+   display: none;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
     font-size: 26px;
@@ -351,7 +351,15 @@
 
     @include breakpoint(medium) {
         font-size: 2rem;
+        display: inline-block;
     }
+}
+.mobile_product_title{
+    border-bottom: 1px solid black;
+    margin-bottom: 20px;
+    font-size: 26px;
+    padding-right: 20px;
+    text-transform: uppercase;
 }
 
 .woocommerce-message {
@@ -470,7 +478,7 @@
 
     .woocommerce-product-gallery {
         float: none;
-        order: 1;
+        
         width: 100%;
 
         @include breakpoint(medium) {
@@ -805,4 +813,17 @@ button.plus {
 
 .woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before{
     margin-right: 5px;
+}
+
+.desktop-thumbnails{
+    display: none;
+    @include breakpoint(medium) {
+        display: block;
+    }
+}
+
+.mobile-thumbnails{
+    @include breakpoint(medium) {
+        display: none;
+    }
 }

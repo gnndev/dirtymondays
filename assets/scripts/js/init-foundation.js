@@ -117,6 +117,13 @@ jQuery('.slick-carousel').slick({
     }
   ]
 });
+jQuery('.single-item').slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+});
 
 var accountInstagram = document.getElementById("instagram-account");
 if (accountInstagram){
