@@ -523,18 +523,30 @@
 
     }
 
-    .slick-dots {
-        bottom: 5px;
-    }
-
 }
 
 .home-products {
     color: black;
     background: white;
-    padding: 30px 15px;
+    padding:0 15px 20px;
+    
 
     a {
         color: black;
+    }
+    @include breakpoint(medium) {
+        padding: 30px 15px;
+    }
+}
+
+.img-btn-submit{
+    font-size:16px;
+    top:65%;
+    transform: translateX(-50%);
+    position:absolute;
+    left:50%;
+    @include breakpoint(medium) {
+        top:70%;
+        font-size:22px; 
     }
 }

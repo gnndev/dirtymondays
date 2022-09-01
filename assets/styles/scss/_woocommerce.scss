@@ -282,7 +282,10 @@
 .woocommerce div.product span.price {
     color: black;
     font-size: 1.25em;
-    margin-bottom: 40px;
+    margin-bottom: 0;
+    @include breakpoint(medium) {
+        margin-bottom: 40px;
+    }
 }
 
 .woocommerce #respond input#submit.alt:hover,
@@ -311,7 +314,10 @@
 .woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
     width: 100%;
     display: block;
-    margin-top: 20px;
+    margin-top: 5px;
+    @include breakpoint(medium) {
+        margin-top: 20px;
+    }
 }
 
 .single-carrello {
@@ -442,6 +448,12 @@
 
 }
 
+.slick-dotted.slick-slider{
+    margin-bottom: 0px;
+    @include breakpoint(medium) {
+        padding-right: 30px;
+    }
+}
 .woocommerce div.product .product_title {
     font-size: 2rem;
     text-transform: uppercase;
@@ -472,9 +484,13 @@
 }
 
 .woocommerce div.product {
-    margin-top: 42px;
+    margin-top: 0;
     display: flex;
     flex-wrap: wrap;
+
+    @include breakpoint(medium) {
+        margin-top: 42px;
+    }
 
     .woocommerce-product-gallery {
         float: none;
@@ -764,6 +780,15 @@ button.plus {
         font-size: 12px;
         margin-bottom: 0;
     }
+    table.variations{
+        tr {
+            align-items: center;
+        display: inline-flex;
+            @include breakpoint(medium) {
+                display: table-row
+            }
+        }
+    }
 
     .cart .product-remove{
         margin-left: auto;
@@ -826,4 +851,11 @@ button.plus {
     @include breakpoint(medium) {
         display: none;
     }
+}
+.slick-dots {
+    bottom: 0;
+}
+
+.slick-dots li button:before{
+    font-size: 8px;
 }
