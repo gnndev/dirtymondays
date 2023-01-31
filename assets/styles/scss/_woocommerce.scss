@@ -311,6 +311,10 @@
     left: 6rem;
 }
 
+.woocommerce div.product div.images {
+    margin-bottom: 1em;
+}
+
 .woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
     width: 100%;
     display: block;
@@ -362,7 +366,7 @@
 }
 .mobile_product_title{
     border-bottom: 1px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 0;
     font-size: 26px;
     padding-right: 20px;
     text-transform: uppercase;
@@ -539,6 +543,13 @@
     dl dt {
         margin-bottom: 0;
         font-weight: 700;
+    }
+}
+
+.woocommerce div.product form.cart .variations {
+    margin-bottom: 4px;
+    @include breakpoint(medium) {
+        margin-bottom: 1em;
     }
 }
 

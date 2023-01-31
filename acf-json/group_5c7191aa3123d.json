@@ -15,13 +15,14 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "display_format": "d\/m\/Y",
             "return_format": "Ymd",
             "first_day": 1
         },
         {
             "key": "field_61a3b20ffed0d",
-            "label": "Fuso orario",
+            "label": "Città",
             "name": "fuso_orario",
             "type": "select",
             "instructions": "",
@@ -34,6 +35,7 @@
             },
             "choices": {
                 "Milano": "Milano",
+                "Roma": "Roma",
                 "LosAngeles": "Los Angeles"
             },
             "default_value": false,
@@ -57,6 +59,7 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "default_value": "NEPENTHA CLUB - PIAZZA DIAZ 1, MILAN",
             "placeholder": "",
             "prepend": "",
@@ -76,6 +79,7 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "post_type": [
                 "dm_rsvp"
             ],
@@ -83,6 +87,88 @@
             "allow_null": 0,
             "allow_archives": 1,
             "multiple": 0
+        },
+        {
+            "key": "field_63aaa146b18ce",
+            "label": "External link",
+            "name": "event_external_link",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "aria-label": "",
+            "default_value": "",
+            "placeholder": ""
+        },
+        {
+            "key": "field_63aaa159b18cf",
+            "label": "External link Text",
+            "name": "text_external_link_text",
+            "type": "text",
+            "instructions": "Testo del pulsante",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_63aaa146b18ce",
+                        "operator": "!=empty"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "50",
+                "class": "",
+                "id": ""
+            },
+            "aria-label": "",
+            "default_value": "Buy Tickets",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_63d8c47242294",
+            "label": "Type",
+            "name": "event_type",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "It's a party",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_63d7d36297c45",
+            "label": "Is live",
+            "name": "event_is_live",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -103,5 +189,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1648813152
+    "modified": 1675150478
 }

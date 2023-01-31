@@ -9,617 +9,640 @@ Layout
 *********************/
 
 body {
-	overflow-x: hidden;
-	cursor: url(../images/cursoret.png), auto !important;
+  overflow-x: hidden;
+  cursor: url(../images/cursoret.png), auto !important;
 }
 
 a {
-	cursor: url(../images/cursoret.png), auto !important;
+  cursor: url(../images/cursoret.png), auto !important;
 }
 
 select {
-	cursor: url(../images/cursoret.png), auto !important;
+  cursor: url(../images/cursoret.png), auto !important;
 }
 
 .page-content {
-
-	@include breakpoint (medium) {
-		margin-top: 100px;
-	}
-
+  @include breakpoint(medium) {
+    margin-top: 100px;
+  }
 }
 
 .single-article {
-	@include breakpoint (medium) {
-		margin-top: 100px;
-	}
+  @include breakpoint(medium) {
+    margin-top: 100px;
+  }
+}
 
+.ups-video {
+  text-align: center;
+  & video {
+    max-width: 100%;
+    @include breakpoint(medium) {
+      max-width: 50%;
+    }
+  }
 }
 
 .content {
-	@include breakpoint (small only) {
-		padding-top: 100px;
-		// margin-bottom: 40px;
-		// padding-bottom: 40px;
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-	
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
-	clear: both;
+  @include breakpoint(small only) {
+    padding-top: 100px;
+    // margin-bottom: 40px;
+    // padding-bottom: 40px;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  clear: both;
 }
-.type-dm_event{
-	@include breakpoint (small only) {
-		padding-top: 0px;
-	}
+.type-dm_event {
+  @include breakpoint(small only) {
+    padding-top: 0px;
+  }
 }
 
 .nf-form-content .privacy-checkbox label {
-	font-size: 16px;
-	font-weight: 400;
-	@include breakpoint (small only) {
-		margin-top: 16px!important;
-	}
+  font-size: 16px;
+  font-weight: 400;
+  @include breakpoint(small only) {
+    margin-top: 16px !important;
+  }
 }
 .small-content {
-	padding-top: 100px;
-	clear: both;
-	width: 80%;
-	margin-left: 10%;
-	margin-right: 10%;
+  padding-top: 100px;
+  clear: both;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
 
-
-	@include breakpoint (medium) {
-		width: 50%;
-		margin: 0 auto;
-	}
+  @include breakpoint(medium) {
+    width: 50%;
+    margin: 0 auto;
+  }
 }
 
 .submit-button {
-	background-color: $secondary-color;
+  background-color: $secondary-color;
 
-	&:hover {
-		background-color: scale-color($secondary-color, $lightness: -15%);
-	}
+  &:hover {
+    background-color: scale-color($secondary-color, $lightness: -15%);
+  }
 }
 
 .button {
-	cursor: url(../images/cursoret.png), auto !important;
+  cursor: url(../images/cursoret.png), auto !important;
 }
 
 .hollow:hover {
-	background-color: #fefefe !important;
-	color: #000 !important;
+  background-color: #fefefe !important;
+  color: #000 !important;
 
-	a {
-		color: #000 !important;
-	}
+  a {
+    color: #000 !important;
+  }
 }
 
-.nf-form-content .ninja-forms-field.button{
-	background: $secondary-color;
-	color: $white;
-	&:hover {
-		background-color: scale-color($secondary-color, $lightness: -15%);
-		color: $white!important;
-	}
+.nf-form-content .ninja-forms-field.button {
+  background: $secondary-color;
+  color: $white;
+  &:hover {
+    background-color: scale-color($secondary-color, $lightness: -15%);
+    color: $white !important;
+  }
 }
 
 .button-center {
-	text-align: center;
-	@include breakpoint (medium) {
-		text-align: left;
-
-	}
+  text-align: center;
+  @include breakpoint(medium) {
+    text-align: left;
+  }
 }
 
-.alignright{
-	text-align: right;
+.alignright {
+  text-align: right;
 }
 ::placeholder {
-	color: #333333;
+  color: #333333;
 }
 
 /*********************
 POSTS & CONTENT STYLES
 *********************/
 .page-title {
-
-	// Remove Foundation vcard styling from author page titles
-	.vcard {
-		border: 0px;
-		padding: 0px;
-	}
+  // Remove Foundation vcard styling from author page titles
+  .vcard {
+    border: 0px;
+    padding: 0px;
+  }
 }
 
-// Post meta  
+// Post meta
 .byline {
-	color: #999;
+  color: #999;
 
-	time {}
+  time {
+  }
 }
 
-// Entry content  
+// Entry content
 .article-header {
-	text-align: center;
+  text-align: center;
 }
 
 .orbit-figure {
-	img {
-		width: 100%;
-	}
+  img {
+    width: 100%;
+  }
 }
 
 .single-title {
-	
-	margin-top: 1rem;
-	font-size: 2rem;
+  margin-top: 1rem;
+  font-size: 2rem;
 }
 
 .text-uppercase {
-	text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .negative-margin {
-	margin: 0 -20px;
-	@include breakpoint (medium) {
-		margin: unset;
-	}
-
-
+  margin: 0 -20px;
+  @include breakpoint(medium) {
+    margin: unset;
+  }
 }
 
 .alignfull {
-	margin: 0 calc(50% - 50vw);
-	max-width: 100vw;
-	width: 100vw;
+  margin: 0 calc(50% - 50vw);
+  max-width: 100vw;
+  width: 100vw;
 }
 
 .entry-content {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 
-	img {
-		max-width: 100%;
-		height: auto;
-	}
+  .alignleft,
+  img.alignleft {
+    margin-right: 1.5em;
+    display: inline;
+    float: left;
+  }
 
-	.alignleft,
-	img.alignleft {
-		margin-right: 1.5em;
-		display: inline;
-		float: left;
-	}
+  .alignright,
+  img.alignright {
+    margin-left: 1.5em;
+    display: inline;
+    float: right;
+  }
 
-	.alignright,
-	img.alignright {
-		margin-left: 1.5em;
-		display: inline;
-		float: right;
-	}
+  .aligncenter,
+  img.aligncenter {
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    clear: both;
+  }
 
-	.aligncenter,
-	img.aligncenter {
-		text-align: center;
-		margin-right: auto;
-		margin-left: auto;
-		display: block;
-		clear: both;
-	}
+  video,
+  object {
+    max-width: 100%;
+    height: auto;
+  }
 
-	video,
-	object {
-		max-width: 100%;
-		height: auto;
-	}
-
-	pre {
-		background: #eee;
-		border: 1px solid #cecece;
-		padding: 10px;
-	}
-
+  pre {
+    background: #eee;
+    border: 1px solid #cecece;
+    padding: 10px;
+  }
 }
 
 .wp-caption {
-	max-width: 100%;
-	background: #eee;
-	padding: 5px;
+  max-width: 100%;
+  background: #eee;
+  padding: 5px;
 
-	// Images inside wp-caption  
-	img {
-		max-width: 100%;
-		margin-bottom: 0;
-		width: 100%;
-	}
+  // Images inside wp-caption
+  img {
+    max-width: 100%;
+    margin-bottom: 0;
+    width: 100%;
+  }
 
-	p.wp-caption-text {
-		font-size: 0.85em;
-		margin: 4px 0 7px;
-		text-align: center;
-	}
+  p.wp-caption-text {
+    font-size: 0.85em;
+    margin: 4px 0 7px;
+    text-align: center;
+  }
 }
 
 // Add Foundation styling to password protect button
 .post-password-form input[type="submit"] {
-	@include button;
+  @include button;
 }
 
 /*********************
 IMAGE GALLERY STYLES
 *********************/
 .gallery {
-	max-width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-right: -15px;
-	margin-left: -15px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .gallery::before,
 .gallery::after {
-	content: ' ';
-	display: table;
+  content: " ";
+  display: table;
 }
 
 .gallery::after {
-	clear: both;
+  clear: both;
 }
 
-.gallery.gallery-columns-1>dl {
-	@include grid-column;
+.gallery.gallery-columns-1 > dl {
+  @include grid-column;
 }
 
-.gallery.gallery-columns-2>dl {
-	@include grid-column(1 of 2);
+.gallery.gallery-columns-2 > dl {
+  @include grid-column(1 of 2);
 }
 
-.gallery.gallery-columns-3>dl {
-	@include grid-column(1 of 3);
+.gallery.gallery-columns-3 > dl {
+  @include grid-column(1 of 3);
 }
 
-.gallery.gallery-columns-4>dl {
-	@include grid-column(1 of 4);
+.gallery.gallery-columns-4 > dl {
+  @include grid-column(1 of 4);
 }
 
-.gallery.gallery-columns-5>dl {
-	@include grid-column(1 of 5);
+.gallery.gallery-columns-5 > dl {
+  @include grid-column(1 of 5);
 }
 
-.gallery.gallery-columns-6>dl {
-	@include grid-column(1 of 6);
+.gallery.gallery-columns-6 > dl {
+  @include grid-column(1 of 6);
 }
 
-.gallery.gallery-columns-7>dl {
-	@include grid-column(1 of 7);
+.gallery.gallery-columns-7 > dl {
+  @include grid-column(1 of 7);
 }
 
-.gallery.gallery-columns-8>dl {
-	@include grid-column(1 of 8);
+.gallery.gallery-columns-8 > dl {
+  @include grid-column(1 of 8);
 }
 
 .gallery dl {
-	width: 100%;
-	float: left;
-	padding-left: 0.9375rem;
-	padding-right: 0.9375rem;
+  width: 100%;
+  float: left;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 
 .gallery dl:last-child:not(:first-child) {
-	float: right;
+  float: right;
 }
 
 // Gallery caption styles
-.gallery-caption {}
+.gallery-caption {
+}
 
-.size-full {}
+.size-full {
+}
 
-.size-large {}
+.size-large {
+}
 
-.size-medium {}
+.size-medium {
+}
 
-.size-thumbnail {}
+.size-thumbnail {
+}
 
 /*********************
 PAGE NAVI STYLES
 *********************/
 .page-navigation {
-	margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 /*********************
 COMMENT STYLES
 *********************/
 #comments {
-	.commentlist {
-		margin-left: 0px;
-	}
+  .commentlist {
+    margin-left: 0px;
+  }
 }
 
 #respond {
-	ul {
-		margin-left: 0px;
-	}
+  ul {
+    margin-left: 0px;
+  }
 }
 
 .commentlist {
-	li {
-		position: relative;
-		clear: both;
-		overflow: hidden;
-		list-style-type: none;
-		margin-bottom: 1.5em;
-		padding: 0.7335em 10px;
+  li {
+    position: relative;
+    clear: both;
+    overflow: hidden;
+    list-style-type: none;
+    margin-bottom: 1.5em;
+    padding: 0.7335em 10px;
 
-		&:last-child {
-			margin-bottom: 0;
-		}
+    &:last-child {
+      margin-bottom: 0;
+    }
 
-		ul.children {
-			margin: 0;
+    ul.children {
+      margin: 0;
 
-			li {}
+      li {
+      }
 
-			.comment {}
+      .comment {
+      }
 
-			.alt {}
+      .alt {
+      }
 
-			.odd {}
+      .odd {
+      }
 
-			.even {}
+      .even {
+      }
 
-			.depth-1 {}
+      .depth-1 {
+      }
 
-			// Change number for different depth  
-			.byuser {}
+      // Change number for different depth
+      .byuser {
+      }
 
-			.bypostauthor {}
+      .bypostauthor {
+      }
 
-			.comment-author-admin {}
+      .comment-author-admin {
+      }
+    }
+  }
 
-		}
-	}
+  li[class*="depth-"] {
+    margin-top: 1.1em;
+  }
 
-	li[class*=depth-] {
-		margin-top: 1.1em;
-	}
+  li.depth-1 {
+    margin-left: 0;
+    margin-top: 0;
+  }
 
-	li.depth-1 {
-		margin-left: 0;
-		margin-top: 0;
-	}
+  li:not(.depth-1) {
+    margin-left: 10px;
+    margin-top: 0;
+    padding-bottom: 0;
+  }
 
-	li:not(.depth-1) {
-		margin-left: 10px;
-		margin-top: 0;
-		padding-bottom: 0;
-	}
+  li.depth-2 {
+  }
 
-	li.depth-2 {}
+  li.depth-3 {
+  }
 
-	li.depth-3 {}
+  li.depth-4 {
+  }
 
-	li.depth-4 {}
+  li.depth-5 {
+  }
 
-	li.depth-5 {}
+  // General comment classes
+  .alt {
+  }
 
-	// General comment classes  
-	.alt {}
+  .odd {
+  }
 
-	.odd {}
+  .even {
+  }
 
-	.even {}
+  .parent {
+  }
 
-	.parent {}
+  .comment {
+  }
 
-	.comment {}
+  .children {
+  }
 
-	.children {}
+  .pingback {
+  }
 
-	.pingback {}
+  .bypostauthor {
+  }
 
-	.bypostauthor {}
+  .comment-author {
+  }
 
-	.comment-author {}
+  .comment-author-admin {
+  }
 
-	.comment-author-admin {}
+  .thread-alt {
+  }
 
-	.thread-alt {}
+  .thread-odd {
+  }
 
-	.thread-odd {}
+  .thread-even {
+  }
 
-	.thread-even {}
+  // vcard
+  .vcard {
+    margin-left: 50px;
 
-	// vcard  
-	.vcard {
-		margin-left: 50px;
+    cite.fn {
+      font-weight: 700;
+      font-style: normal;
 
-		cite.fn {
-			font-weight: 700;
-			font-style: normal;
+      a.url {
+      }
+    }
 
-			a.url {}
+    time {
+      float: right;
 
-		}
+      a {
+        color: #999;
+        text-decoration: none;
 
-		time {
-			float: right;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
 
-			a {
-				color: #999;
-				text-decoration: none;
+    img.photo {
+    }
 
-				&:hover {
-					text-decoration: underline;
-				}
+    img.avatar {
+      position: absolute;
+      left: 10px;
+      padding: 2px;
+      border: 1px solid #cecece;
+      background: #fff;
+    }
+  }
 
-			}
+  // end .commentlist .vcard
 
-		}
+  // comment meta
+  .comment-meta {
+    a {
+    }
+  }
 
-		img.photo {}
+  .commentmetadata {
+    a {
+    }
+  }
 
-		img.avatar {
-			position: absolute;
-			left: 10px;
-			padding: 2px;
-			border: 1px solid #cecece;
-			background: #fff;
-		}
+  // comment content
+  .comment_content {
+    p {
+      margin: 0.7335em 0 1.5em;
+      font-size: 1em;
+      line-height: 1.5em;
+    }
+  }
 
-	}
+  // end .commentlist .comment_content
 
-	// end .commentlist .vcard  
+  // comment reply link
+  .comment-reply-link {
+    float: right;
 
+    &:hover,
+    &:focus {
+    }
+  }
 
-	// comment meta  
-	.comment-meta {
-
-		a {}
-
-	}
-
-	.commentmetadata {
-
-		a {}
-
-	}
-
-	// comment content  
-	.comment_content {
-
-		p {
-			margin: 0.7335em 0 1.5em;
-			font-size: 1em;
-			line-height: 1.5em;
-		}
-
-	}
-
-	// end .commentlist .comment_content  
-
-	// comment reply link  
-	.comment-reply-link {
-		float: right;
-
-		&:hover,
-		&:focus {}
-
-	}
-
-	// end .commentlist .comment-reply-link  
-
+  // end .commentlist .comment-reply-link
 }
 
-// end .commentlist  
+// end .commentlist
 
 /*********************
 COMMENT FORM STYLES
 *********************/
 .respond-form {
-	margin: 1.5em 10px;
-	padding-bottom: 2.2em;
+  margin: 1.5em 10px;
+  padding-bottom: 2.2em;
 
-	form {
-		margin: 0.75em 0;
+  form {
+    margin: 0.75em 0;
 
-		li {
-			list-style-type: none;
-			clear: both;
-			margin-bottom: 0.7335em;
+    li {
+      list-style-type: none;
+      clear: both;
+      margin-bottom: 0.7335em;
 
-			label,
-			small {
-				display: none;
-			}
-		}
+      label,
+      small {
+        display: none;
+      }
+    }
 
-		input[type=text],
-		input[type=email],
-		input[type=url],
-		textarea {
-			padding: 3px 6px;
-			background: #efefef;
-			border: 2px solid #cecece;
-			line-height: 1.5em;
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+      padding: 3px 6px;
+      background: #efefef;
+      border: 2px solid #cecece;
+      line-height: 1.5em;
 
-			&:focus {
-				background: #fff;
-			}
+      &:focus {
+        background: #fff;
+      }
 
-			// form validation  
-			&:invalid {
-				outline: none;
-				border-color: #fbc2c4;
-				background-color: #f6e7eb;
-				-webkit-box-shadow: none;
-				-moz-box-shadow: none;
-				-ms-box-shadow: none;
-				box-shadow: none;
-			}
-		}
+      // form validation
+      &:invalid {
+        outline: none;
+        border-color: #fbc2c4;
+        background-color: #f6e7eb;
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+      }
+    }
 
-		input[type=text],
-		input[type=email],
-		input[type=url] {
-			max-width: 400px;
-			min-width: 250px;
-		}
+    input[type="text"],
+    input[type="email"],
+    input[type="url"] {
+      max-width: 400px;
+      min-width: 250px;
+    }
 
-		textarea {
-			resize: none;
-			width: 97.3%;
-			height: 150px;
-		}
-
-	}
+    textarea {
+      resize: none;
+      width: 97.3%;
+      height: 150px;
+    }
+  }
 }
 
-// comment form title  
+// comment form title
 #comment-form-title {
-	margin: 0 0 1.1em;
+  margin: 0 0 1.1em;
 }
 
-// cancel comment reply link  
+// cancel comment reply link
 #cancel-comment-reply {
-	a {}
+  a {
+  }
 }
 
-// logged in comments  
-.comments-logged-in-as {}
+// logged in comments
+.comments-logged-in-as {
+}
 
-// allowed tags  
+// allowed tags
 #allowed_tags {
-	margin: 1.5em 10px 0.7335em 0;
+  margin: 1.5em 10px 0.7335em 0;
 }
 
-// No comments  
+// No comments
 .nocomments {
-	margin: 0 20px 1.1em;
+  margin: 0 20px 1.1em;
 }
 
 /*********************
 SIDEBARS & ASIDES
 *********************/
 .sidebar {
-	li {
-		list-style: none;
-	}
+  li {
+    list-style: none;
+  }
 }
 
 .widget {
-	ul {
-		margin: 0;
-	}
+  ul {
+    margin: 0;
+  }
 }
 
 /*********************
 FOOTER STYLES
 *********************/
 .footer {
-	clear: both;
-	margin-top: 1em;
+  clear: both;
+  margin-top: 1em;
 }
 
 /*********************
@@ -627,7 +650,7 @@ VISUAL EDITOR STYLES
 *********************/
 // Makes content look better in visual editor
 body#tinymce {
-	margin: 20px;
+  margin: 20px;
 }
 
 /*********************
@@ -635,32 +658,36 @@ PLUGIN STYLES
 *********************/
 // Makes Gravity Forms play nice with Foundation Form styles
 .gform_body ul {
-	list-style: none outside none;
-	margin: 0;
+  list-style: none outside none;
+  margin: 0;
 }
 
 // Hide Gravity Forms validation fields when GFCSS is disabled
 .gform_validation_container,
 .gform_wrapper .gform_validation_container,
 body .gform_wrapper li.gform_validation_container,
-body .gform_wrapper .gform_body ul.gform_fields li.gfield.gform_validation_container,
+body
+  .gform_wrapper
+  .gform_body
+  ul.gform_fields
+  li.gfield.gform_validation_container,
 body .gform_wrapper ul.gform_fields li.gfield.gform_validation_container {
-	display: none !important;
-	position: absolute !important;
-	left: -9000px;
+  display: none !important;
+  position: absolute !important;
+  left: -9000px;
 }
 
 /** mailster */
 .mailster-_recaptcha-wrapper {
-	width: 1px !important;
-	height: 1px !important;
+  width: 1px !important;
+  height: 1px !important;
 }
 
 .mailster-submit-wrapper {
-	width: 100% !important;
-	text-align: center;
+  width: 100% !important;
+  text-align: center;
 }
 
 .nf-form-fields-required {
-	display: none;
-  }
+  display: none;
+}

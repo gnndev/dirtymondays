@@ -3,6 +3,26 @@
     "title": "Block Event",
     "fields": [
         {
+            "key": "field_63b3d9fccd72f",
+            "label": "title",
+            "name": "block_events_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "aria-label": "",
+            "default_value": "UPCOMING SHOWS",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_5c7195f1337c6",
             "label": "Display events",
             "name": "block_display_events",
@@ -15,6 +35,7 @@
                 "class": "",
                 "id": ""
             },
+            "aria-label": "",
             "default_value": -1,
             "placeholder": "",
             "prepend": "",
@@ -22,6 +43,23 @@
             "min": "",
             "max": "",
             "step": ""
+        },
+        {
+            "key": "field_63b3da6bcd730",
+            "label": "video",
+            "name": "block_events_video",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "aria-label": "",
+            "default_value": "",
+            "placeholder": ""
         }
     ],
     "location": [
@@ -31,6 +69,13 @@
                 "operator": "==",
                 "value": "acf\/events"
             }
+        ],
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/upcoming"
+            }
         ]
     ],
     "menu_order": 0,
@@ -39,7 +84,8 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": true,
     "description": "",
-    "modified": 1551043301
+    "show_in_rest": 0,
+    "modified": 1675150014
 }
