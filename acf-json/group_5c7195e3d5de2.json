@@ -60,6 +60,25 @@
             "aria-label": "",
             "default_value": "",
             "placeholder": ""
+        },
+        {
+            "key": "field_63e55c8b0f48c",
+            "label": "show_header_image",
+            "name": "show_header_image",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -87,5 +106,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675150014
+    "modified": 1675975858
 }

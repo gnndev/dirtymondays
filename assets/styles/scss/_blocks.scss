@@ -122,7 +122,42 @@
   }
 }
 
+.ups-image-container {
+  background-image: url(../images/grafica-live-fast.jpg);
+  background-position-y: top;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  .livefast {
+    margin-top: rem-calc(32);
+    display: block;
+    padding-top: rem-calc(28);
+    padding-left: 10%;
+    padding-right: 10%;
+
+    @include breakpoint(medium) {
+      margin-top: rem-calc(60);
+      padding-top: rem-calc(100);
+    }
+  }
+
+  .title {
+    text-align: center;
+    padding: rem-calc(16 16 0);
+
+    @include breakpoint(medium) {
+      padding: rem-calc(50 16);
+    }
+  }
+}
+
 #ups-block {
+  .see-more {
+    text-align: center;
+  }
+
+  width: 100%;
   max-width: 1170px;
   margin: auto;
   @include breakpoint(medium) {
@@ -153,18 +188,20 @@
       @include breakpoint(xlarge) {
         width: unset;
         left: 0;
-        transform: translate(-50%, -50%);
-        top: 50%;
+        transform: translate(-70%, -20%);
+        top: 0;
       }
     }
     .btn {
       text-align: center;
       font-weight: 700;
+      box-shadow: 5px 5px 0px 0px #000000;
       text-transform: uppercase;
       color: #000000;
-      padding: 6px 12px;
-      border-radius: 20px;
+      padding: 4px 12px;
+      border-radius: 15px;
       font-size: 14px;
+      margin-bottom: 5px;
       &:first-child {
         margin-right: 4px;
         @include breakpoint(xlarge) {
@@ -172,8 +209,9 @@
         }
       }
       @include breakpoint(xlarge) {
-        padding: 12px;
-        font-size: 29px;
+        box-shadow: 10px 10px 0px 0px #000000;
+        padding: 7px 20px;
+        font-size: 27px;
         &:first-child {
           margin-bottom: 16px;
           margin-right: 0;
@@ -208,10 +246,11 @@
     }
     p {
       text-transform: uppercase;
-      letter-spacing: -2px;
+      letter-spacing: -1px;
       margin-bottom: 0;
       font-weight: 500;
       @include breakpoint(xlarge) {
+        letter-spacing: -2px;
         margin-top: auto;
       }
     }
@@ -241,7 +280,7 @@
       & > h2 {
         white-space: nowrap;
         text-decoration: underline;
-        font-size: 37px;
+        font-size: 35px;
         line-height: 33px;
 
         @include breakpoint(xlarge) {
@@ -262,9 +301,8 @@
         display: none;
       }
       & > h2 {
-        white-space: nowrap;
         text-decoration: underline;
-        font-size: 37px;
+        font-size: 35px;
         line-height: 33px;
 
         @include breakpoint(xlarge) {
@@ -281,12 +319,16 @@
       .date {
         line-height: 14px;
         font-size: 14px;
+        span {
+          font-weight: 400;
+        }
       }
     }
 
     .block-event-btn-mobile {
       margin-left: auto;
-      width: 120px;
+      flex: 0 0 112px;
+      width: 112px;
       justify-content: space-between;
       @include breakpoint(xlarge) {
         display: none;
@@ -319,6 +361,9 @@
 
       & > p {
         font-size: 20px;
+        span {
+          font-weight: 400;
+        }
         @include breakpoint(xlarge) {
           font-size: 29px;
         }

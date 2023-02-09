@@ -17,7 +17,8 @@
         </div>
         <?php endif; ?>
         <?php 
-        $events_num = get_field('block_display_events'); // prende il numro di eventi da mostrare nel blocco da acf
+        $events_num = (get_field('block_display_events') > 0) ? get_field('block_display_events') : 1000 ; // prende il numro di eventi da mostrare nel blocco da acf
+
         $args= array(
             'post_type' => 'dm_event',
             'posts_per_page' =>  -1,
@@ -34,6 +35,7 @@
                 );
 
         $the_query = new WP_Query( $args );
+        $count_ev = 1;
         while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 
         <?php 
@@ -47,7 +49,7 @@
                 $today_timepstamp = $today->format('YmdH');
             }
             
-            if( $timestamp >= $today_timepstamp ) : ?>
+            if( $timestamp >= $today_timepstamp && ( $events_num && $count_ev <= $events_num)) : $count_ev++?>
         <div class="grid-x grid-padding-x block-event-single">
             <div class="cell small-12 medium-3 block-event-field block-event-title">
                 <?php
@@ -75,7 +77,7 @@
         <?php 
         endwhile;
         wp_reset_postdata(); ?>
-        <?php if( $events_num > 0) : ?>
+        <?php if( $events_num > 0 && $events_num < 1000) : ?>
         <div class="see-more">
             <a class="hollow button see-more-btn" href="<?php echo home_url(); ?>/upcoming-show/">SEE MORE</a>
         </div>
