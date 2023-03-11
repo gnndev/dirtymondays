@@ -93,7 +93,9 @@ if ( ! empty( $block['className'] ) ) {
                 </div>
 
                 <div class="block-event-field block-event-btn">
+                    <?php if(get_field('event_disable_rsvp', get_the_ID()) == false) : ?>
                     <a class="btn" href="<?php the_permalink(); ?>">RSVP</a>
+                    <?php endif;?>
                     <?php if(get_field('event_external_link',get_the_ID())) : ?>
                     <a class="btn" target="_blank"
                         href="<?php echo get_field('event_external_link' ,get_the_ID()); ?>">TIX

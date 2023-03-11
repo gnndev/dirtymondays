@@ -6,6 +6,7 @@
             "key": "field_5c7191b4fa7cf",
             "label": "Event date",
             "name": "event_date",
+            "aria-label": "",
             "type": "date_picker",
             "instructions": "",
             "required": 0,
@@ -15,7 +16,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "display_format": "d\/m\/Y",
             "return_format": "Ymd",
             "first_day": 1
@@ -24,6 +24,7 @@
             "key": "field_61a3b20ffed0d",
             "label": "Città",
             "name": "fuso_orario",
+            "aria-label": "",
             "type": "select",
             "instructions": "",
             "required": 0,
@@ -50,6 +51,7 @@
             "key": "field_5c71922a2c175",
             "label": "Event location",
             "name": "event_location",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -59,7 +61,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "NEPENTHA CLUB - PIAZZA DIAZ 1, MILAN",
             "placeholder": "",
             "prepend": "",
@@ -67,31 +68,10 @@
             "maxlength": ""
         },
         {
-            "key": "field_5c7195b1a89ec",
-            "label": "Rsvp link",
-            "name": "event_rsvp",
-            "type": "page_link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "aria-label": "",
-            "post_type": [
-                "dm_rsvp"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
-        },
-        {
             "key": "field_63aaa146b18ce",
             "label": "External link",
             "name": "event_external_link",
+            "aria-label": "",
             "type": "url",
             "instructions": "",
             "required": 0,
@@ -101,7 +81,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "",
             "placeholder": ""
         },
@@ -109,6 +88,7 @@
             "key": "field_63aaa159b18cf",
             "label": "External link Text",
             "name": "text_external_link_text",
+            "aria-label": "",
             "type": "text",
             "instructions": "Testo del pulsante",
             "required": 0,
@@ -125,7 +105,6 @@
                 "class": "",
                 "id": ""
             },
-            "aria-label": "",
             "default_value": "Buy Tickets",
             "placeholder": "",
             "prepend": "",
@@ -136,6 +115,7 @@
             "key": "field_63d8c47242294",
             "label": "Type",
             "name": "event_type",
+            "aria-label": "",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -155,6 +135,7 @@
             "key": "field_63d7d36297c45",
             "label": "Is live",
             "name": "event_is_live",
+            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -169,6 +150,48 @@
             "ui": 1,
             "ui_on_text": "",
             "ui_off_text": ""
+        },
+        {
+            "key": "field_6409a64c5e65d",
+            "label": "Disable RSVP Button",
+            "name": "event_disable_rsvp",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "ui_on_text": "",
+            "ui_off_text": "",
+            "ui": 1
+        },
+        {
+            "key": "field_5c7195b1a89ec",
+            "label": "(Deprecato) Rsvp link",
+            "name": "event_rsvp",
+            "aria-label": "",
+            "type": "page_link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "dm_rsvp"
+            ],
+            "taxonomy": "",
+            "allow_archives": 1,
+            "multiple": 0,
+            "allow_null": 0
         }
     ],
     "location": [
@@ -189,5 +212,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1675150478
+    "modified": 1678354024
 }
