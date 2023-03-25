@@ -1,11 +1,8 @@
 <?php
 
 // define the ninja_forms_action_email_message callback 
-function filter_ninja_forms_action_email_message( $message, $data, $action_settings ) { 
-    // error_log(print_r($action_settings,true));
-    // error_log(print_r($data['settings']['key'],true));
-     $logo = ('laform' === $data['settings']['key']) ? 'https://dirtymondays.com/wp-content/uploads/2021/11/dmo_la_logo_white.png' : 'https://dirtymondays.com/wp-content/uploads/2021/09/dmo_roundlogo_white_300.png';
-    //error_log( $logo );
+function filter_ninja_forms_action_email_message( $message, $data, $action_settings ) {
+    $logo = ('laform' === $data['settings']['key']) ? 'https://dirtymondays.com/wp-content/uploads/2021/11/dmo_la_logo_white.png' : 'https://dirtymondays.com/wp-content/uploads/2021/09/dmo_roundlogo_white_300.png';
 	$message = <<<HTML
         <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
         <html xmlns="http://www.w3.org/1999/xhtml">

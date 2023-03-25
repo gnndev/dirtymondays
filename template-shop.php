@@ -62,13 +62,13 @@ get_header(); ?>
                 $args = array(
                     'post_type' => 'product',
                     'posts_per_page' => -1,
-                    'orderby'        => 'menu_order',
+                    'orderby' => 'menu_order',
                     'order' => 'ASC'
                     );
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts() ) {
-                    while ( $loop->have_posts() ) : $loop->the_post(); ?>
-                    <?php $product = wc_get_product( get_the_ID() ); /* get the WC_Product Object */ ?>
+                    while ( $loop->have_posts() ) : $loop->the_post();
+                    $product = wc_get_product( get_the_ID() ); ?>
                     <div class="products-grid-item <?php $terms = get_the_terms( get_the_ID(), 'product_cat' );
                     foreach ($terms as $term) {
                         echo  $term->slug;
@@ -81,13 +81,13 @@ get_header(); ?>
                     <?php echo ( $product->is_in_stock() ) ? $product->get_price_html() : '<span class="sold-out-color">Sold out</span>';?>
                 </p>
             </div>
-                <?php endwhile;
+            <?php endwhile;
                     } else {
                         echo __( 'No products found' );
                     }
                     wp_reset_postdata();
                 ?>
-            </div>
+        </div>
         <!--/.products-->
 
     </div>
@@ -97,7 +97,7 @@ get_header(); ?>
 <div id="newsletter-block">
     <div class="newsletter-block-content">
         <h2>SUBSCRIBE</h2>
-        <?php echo do_shortcode('[newsletter_signup_form id=1]'); ?>
+        <?php echo do_shortcode('[ninja_form id=99]'); ?>
     </div>
 </div>
 <?php get_footer(); ?>
