@@ -324,3 +324,20 @@ function bbloomer_update_item_quantity_checkout( $post_data ) {
    }   
    if ( $updated_qty ) WC()->cart->calculate_totals();
 }
+
+
+// Add label to WooCommerce single product image using a filter
+function add_label_to_product_image($image_html, $attachment_id) {
+    $product_id = get_the_ID();
+    $country_restriction_type = get_post_meta($product_id, '_fz_country_restriction_type', true);
+
+    if ($country_restriction_type === 'specific' || $country_restriction_type === 'excluded') {
+        $country = get_post_meta($product_id, '_restricted_countries')[0];
+        $label = ($country_restriction_type === 'specific') ?  implode(', ', $country)  . ' only': 'not in '. implode(', ', $country);
+        $label_html = '<span class="country-product-label">' . esc_html($label) . '</span>';
+        $image_html = $label_html . $image_html;
+    }
+
+    return $image_html;
+}
+add_filter('woocommerce_single_product_image_thumbnail_html', 'add_label_to_product_image', 10, 2);

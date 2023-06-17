@@ -68,13 +68,25 @@ get_header(); ?>
                 $loop = new WP_Query( $args );
                 if ( $loop->have_posts() ) {
                     while ( $loop->have_posts() ) : $loop->the_post();
-                    $product = wc_get_product( get_the_ID() ); ?>
+                    $product = wc_get_product( get_the_ID() ); 
+                    $product_id = get_the_ID();
+                    $country_restriction_type = get_post_meta($product_id, '_fz_country_restriction_type', true);
+                    $label = '';
+                    if ($country_restriction_type === 'specific' || $country_restriction_type === 'excluded') {
+                        $country = get_post_meta($product_id, '_restricted_countries')[0];
+                        $label = ($country_restriction_type === 'specific') ?  implode(', ', $country)  . ' only': 'not in '. implode(', ', $country);   
+                    }
+                    ?>
                     <div class="products-grid-item <?php $terms = get_the_terms( get_the_ID(), 'product_cat' );
                     foreach ($terms as $term) {
                         echo  $term->slug;
                     }?>">
-                <a href="<?php the_permalink(); ?>"
-                    class="<?php echo (!$product->is_in_stock()) ? 'sold-out' : 'in-stock';?>"><?php the_post_thumbnail('woocommerce_thumbnail'); ?></a>
+                <a href="<?php the_permalink(); ?>" class="stock-value <?php echo (!$product->is_in_stock()) ? 'sold-out' : 'in-stock'; ?>">
+                    <?php if ($label): ?>
+                        <span class="country-product-label"><?php echo esc_html($label); ?> </span>
+                    <?php endif; ?>
+                    <?php the_post_thumbnail('woocommerce_thumbnail'); ?>
+                </a>
                 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
                 <p>
