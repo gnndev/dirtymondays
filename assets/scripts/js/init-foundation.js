@@ -142,26 +142,51 @@ if (accountInstagram){
 
 
 // // store filter for each group
-
-
-jQuery('.products-filters').on( 'change', function( event ) {
-  var $select = jQuery( event.target );
-  // get group key
-  // set filter for group
-  var filter = event.target.value;
-  // combine filters
-  //jQuery('.products-grid-item').show();
-  jQuery( '.products-grid-item' ).each(function( index ) {
-    if(jQuery( this ).hasClass(filter) || '' === filter) {
-      jQuery( this ).show();
-    } else {
-      jQuery( this ).hide();
-    }
-    
+//add event listener to all .cat-filter with document.querySelectorAll('.cat-filter')
+var catFilters = document.querySelectorAll('.cat-filter');
+if (catFilters) {
+  catFilters.forEach(function (catFilter) {
+    catFilter.addEventListener('click', function (e) {
+      e.preventDefault();
+      //add class active to the clicked filter
+      catFilters.forEach(function (catFilter) {
+        catFilter.classList.remove('active');
+      });
+      //get the filter value
+      var filter = e.target.dataset.filter;
+      //show all the items with class = filter
+      var items = document.querySelectorAll('.products-grid-item');
+      items.forEach(function (item) {
+        item.classList.remove('hide');
+        if (!item.classList.contains(filter) && filter !== 'all') {
+          item.classList.add('hide');
+        }
+      });
+      e.target.classList.add('active');
+    });
   });
-  // set filter for Isotope
- // $grid.isotope({ filter: filterValue });
-});
+}
+
+
+
+// jQuery('.products-filters').on( 'change', function( event ) {
+//   var $select = jQuery( event.target );
+//   // get group key
+//   // set filter for group
+//   var filter = event.target.value;
+//   // combine filters
+//   //jQuery('.products-grid-item').show();
+//   jQuery( '.products-grid-item' ).each(function( index ) {
+//     if(jQuery( this ).hasClass(filter) || '' === filter) {
+//       jQuery( this ).show();
+//     } else {
+//       jQuery( this ).hide();
+//     }
+    
+//   });
+//   // set filter for Isotope
+//  // $grid.isotope({ filter: filterValue });
+// });
 
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */

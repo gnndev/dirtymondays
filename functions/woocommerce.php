@@ -341,3 +341,9 @@ function add_label_to_product_image($image_html, $attachment_id) {
     return $image_html;
 }
 add_filter('woocommerce_single_product_image_thumbnail_html', 'add_label_to_product_image', 10, 2);
+
+
+function remove_upsell_products() {
+    remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
+}
+add_action('woocommerce_after_single_product_summary', 'remove_upsell_products', 15);

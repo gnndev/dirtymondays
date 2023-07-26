@@ -82,7 +82,7 @@
 }
 
 .products-header {
-    margin-top:90px;
+    margin-top: 90px;
     background-position: center;
     padding-top: 99.07%;
     background-image: url('https://dirtymondays.com/wp-content/uploads/2020/10/DIRTYMONDAYS_shop_cover_mobile_3DEF.jpg');
@@ -90,99 +90,90 @@
     background-size: cover;
 
     @include breakpoint(medium) {
-        margin-top:100px;
+        margin-top: 100px;
         background-image: url('https://dirtymondays.com/wp-content/uploads/2020/10/DIRTYMONDAYS_shop_cover_6DEF.jpg');
         padding-top: 23.80%;
     }
 }
 
 .products-hero {
-    margin-top:90px;
+    margin-top: 90px;
+
     img {
         width: 100%;
     }
+
     @include breakpoint(medium) {
-        margin-top:100px; 
+        margin-top: 100px;
     }
 }
 
-.products-bar {
-    margin-top: 50px;
-    margin-bottom: 50px;
+.products-featured {
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
     align-items: center;
-
-    h2 {
-        font-size: 2rem;
-        text-transform: uppercase;
-    }
-
-    >div {
-        margin-top: 20px;
+    padding-top: 32px;
+    flex-direction: column;
+    > h2{
         display: flex;
-        justify-content: space-between;
-
-        @include breakpoint(medium) {
-            margin-top: 0;
-            justify-content: unset;
-        }
+        align-items: center;
+        width: fit-content;
+        justify-content: center;
+        text-transform: uppercase;
+        font-size: 18px;
+        padding: 12px;
+        background-color: $secondary-color;
+        color: white;
     }
-
-    @include breakpoint(medium) {
-        margin-top: 30px;
-        margin-bottom: 10px;
-        flex-direction: row;
+    .featured-products-grid{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 16px;
+        width: 100%;
     }
+}
+.products-bar {
+    margin-top: 32px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
 
     .products-filters {
-        p {
-            padding-right: 20px;
-            margin-bottom: 0;
+        //make scrollable on mobile
+        overflow-x: scroll;
+        white-space: nowrap;
 
+        //on desktop remove scrollable
+        @include breakpoint(medium) {
+            overflow-x: unset;
+            white-space: unset;
         }
 
-        select {
-            margin-bottom: 0;
-            border: 1px solid black;
-            height: 2rem;
-            margin: 0;
-            padding: .3rem;
+        display:flex;
 
-            font-size: 1rem;
-            font-weight: 400;
-            line-height: 1rem;
-            color: #000;
+        >div {
 
+            margin-bottom: 10px;
+            background-color: black;
+            padding: 5px 10px;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: white;
+            cursor: pointer;
+            transition: all .3s ease-in-out;
+            margin-right: 2px;
 
-        }
+            &:hover {
+                color: $secondary-color;
+            }
 
-        display: flex;
-        align-items: center;
-    }
-
-    .carrello {
-        display: flex;
-        align-items: center;
-        margin-left: 30px;
-
-        i {
-            font-size: 22px;
-        }
-
-        a {
-            display: inline-block;
-        }
-
-        img {
-            height: 26px;
-
-            @include breakpoint(medium) {
-                height: 32px;
+            &.active {
+                color: $secondary-color;
             }
         }
     }
+
+
 }
 
 .products-grid {
@@ -197,7 +188,7 @@
     text-align: center;
     margin: 12px 12px 25px;
     width: calc(50% - 24px);
-    
+
 
     @include breakpoint(medium) {
         width: calc(25% - 24px);
@@ -210,7 +201,7 @@
         font-size: rem-calc(12);
     }
 
-    p{
+    p {
         font-size: rem-calc(12);
     }
 }
@@ -220,7 +211,7 @@
 }
 
 .related.products {
-    display: none;
+   
 }
 
 
@@ -283,6 +274,7 @@
     color: black;
     font-size: 1.25em;
     margin-bottom: 0;
+
     @include breakpoint(medium) {
         margin-bottom: 40px;
     }
@@ -319,6 +311,7 @@
     width: 100%;
     display: block;
     margin-top: 5px;
+
     @include breakpoint(medium) {
         margin-top: 20px;
     }
@@ -352,7 +345,7 @@
 }
 
 .woocommerce div.product .product_title {
-   display: none;
+    display: none;
     border-bottom: 1px solid black;
     margin-bottom: 20px;
     font-size: 26px;
@@ -364,7 +357,8 @@
         display: inline-block;
     }
 }
-.mobile_product_title{
+
+.mobile_product_title {
     border-bottom: 1px solid black;
     margin-bottom: 0;
     font-size: 26px;
@@ -446,18 +440,21 @@
 
 .quantity {
     display: flex;
+
     @include breakpoint(small only) {
         justify-content: flex-end;
     }
 
 }
 
-.slick-dotted.slick-slider{
+.slick-dotted.slick-slider {
     margin-bottom: 0px;
+
     @include breakpoint(medium) {
         padding-right: 30px;
     }
 }
+
 .woocommerce div.product .product_title {
     font-size: 2rem;
     text-transform: uppercase;
@@ -498,7 +495,7 @@
 
     .woocommerce-product-gallery {
         float: none;
-        
+
         width: 100%;
 
         @include breakpoint(medium) {
@@ -548,6 +545,7 @@
 
 .woocommerce div.product form.cart .variations {
     margin-bottom: 4px;
+
     @include breakpoint(medium) {
         margin-bottom: 1em;
     }
@@ -628,11 +626,13 @@ button {
         text-transform: uppercase;
     }
 }
+
 .stock-value {
     font-size: 14px;
     display: block;
     position: relative;
 }
+
 .sold-out img {
     opacity: 0.5;
 }
@@ -682,37 +682,42 @@ textarea {
 }
 
 .is-accordion-submenu table td {
-    padding-left: .625rem!important;
+    padding-left: .625rem !important;
 }
 
-.woocommerce-cart, .woocommerce-checkout{
-/* Input field */
-.select2-selection__rendered {  }
-    
-/* Around the search field */
-.select2-search {  }
-    
-/* Search field */
-.select2-search input {  }
-    
-/* Each result */
-.select2-results {color:black;
-  }
-    
-/* Higlighted (hover) result */
-.select2-results__option--highlighted {  
-    color:white;
-    background:black;
-}
-    
-/* Selected option */
-.select2-results__option[aria-selected=true] {  }
+.woocommerce-cart,
+.woocommerce-checkout {
+
+    /* Input field */
+    .select2-selection__rendered {}
+
+    /* Around the search field */
+    .select2-search {}
+
+    /* Search field */
+    .select2-search input {}
+
+    /* Each result */
+    .select2-results {
+        color: black;
+    }
+
+    /* Higlighted (hover) result */
+    .select2-results__option--highlighted {
+        color: white;
+        background: black;
+    }
+
+    /* Selected option */
+    .select2-results__option[aria-selected=true] {}
 
 }
 
-.woocommerce div.product form.cart .variations td, .woocommerce div.product form.cart .variations th {
+.woocommerce div.product form.cart .variations td,
+.woocommerce div.product form.cart .variations th {
     padding-left: 0;
-    text-align: left;}
+    text-align: left;
+}
 
 
 button.minus {
@@ -732,118 +737,139 @@ button.plus {
 }
 
 .quantity input[type=number]::-webkit-inner-spin-button,
-.quantity  input[type=number]::-webkit-outer-spin-button {
+.quantity input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
 
-.quantity{
-    .qty{
+.quantity {
+    .qty {
         margin-bottom: 0;
     }
 }
 
-.added_to_cart.wc-forward{
-    display: none!important;
+.added_to_cart.wc-forward {
+    display: none !important;
 }
 
-.bag-icon{
+.bag-icon {
     margin-left: auto;
     cursor: pointer;
     margin-right: 8px;
+
     .xoo-wscb-icon {
         font-size: 21px;
     }
 
-    .xoo-wscb-count{
+    .xoo-wscb-count {
         font-size: 9px;
         height: 25px;
         line-height: 25px;
     }
 }
 
-.woocommerce table.shop_table_responsive tr, .woocommerce-page table.shop_table_responsive tr{
+.woocommerce table.shop_table_responsive tr,
+.woocommerce-page table.shop_table_responsive tr {
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 1rem;
+
     @include breakpoint(large) {
         display: table-row;
     }
 }
-.woocommerce-cart-form__cart-item.cart_item td::before{
-    content: ""!important;
+
+.woocommerce-cart-form__cart-item.cart_item td::before {
+    content: "" !important;
 }
 
 
-.cart .dm-cart-product-thumbnail{
-        flex: 0 0 auto;
-        max-width: 80px;
-        @include breakpoint(large) {
-            max-width: 150px;
-            width: 150px;
-        }
-         img {
-            max-width: 100%;
-         }
+.cart .dm-cart-product-thumbnail {
+    flex: 0 0 auto;
+    max-width: 80px;
+
+    @include breakpoint(large) {
+        max-width: 150px;
+        width: 150px;
     }
-    .cart .product-name{
-        flex: 1 1 auto;
+
+    img {
+        max-width: 100%;
     }
-    .cart .product-cart-variations{
-        color: gray;
-        font-size: 12px;
-        margin-bottom: 0;
-    }
-    table.variations{
-        tr {
-            align-items: center;
+}
+
+.cart .product-name {
+    flex: 1 1 auto;
+}
+
+.cart .product-cart-variations {
+    color: gray;
+    font-size: 12px;
+    margin-bottom: 0;
+}
+
+table.variations {
+    tr {
+        align-items: center;
         display: inline-flex;
-            @include breakpoint(medium) {
-                display: table-row
-            }
+
+        @include breakpoint(medium) {
+            display: table-row
         }
     }
-
-    .cart .product-remove{
-        margin-left: auto;
-        width: 48px;
-    }
-
-    .cart .product-subtotal{
-        flex: 0 0 auto;
-        margin-left: auto;
-    }
-
-    .woocommerce-cart .woocommerce table.shop_table td{
-        padding: 9px 7px;
-        border-top: 0!important;
-    }
-
-    .woocommerce #content table.cart td.actions, .woocommerce table.cart td.actions, .woocommerce-page #content table.cart td.actions, .woocommerce-page table.cart td.actions {
-        border-top: 1px solid rgba(0,0,0,.1)!important;
-        width: 100%;
-
-        >button{
-            float: right;
-        }
-    }
-.woocommerce table.shop_table_responsive tr td, .woocommerce-page table.shop_table_responsive tr td{
-    background-color: white!important;
-    text-align: left!important;
 }
 
-.woocommerce-cart-form{
+.cart .product-remove {
+    margin-left: auto;
+    width: 48px;
+}
+
+.cart .product-subtotal {
+    flex: 0 0 auto;
+    margin-left: auto;
+}
+
+.woocommerce-cart .woocommerce table.shop_table td {
+    padding: 9px 7px;
+    border-top: 0 !important;
+}
+
+.woocommerce #content table.cart td.actions,
+.woocommerce table.cart td.actions,
+.woocommerce-page #content table.cart td.actions,
+.woocommerce-page table.cart td.actions {
+    border-top: 1px solid rgba(0, 0, 0, .1) !important;
+    width: 100%;
+
+    >button {
+        float: right;
+    }
+}
+
+.woocommerce table.shop_table_responsive tr td,
+.woocommerce-page table.shop_table_responsive tr td {
+    background-color: white !important;
+    text-align: left !important;
+}
+
+.woocommerce-cart-form {
     @include breakpoint(large) {
         float: left;
-    width:55%}
+        width: 55%
+    }
 }
-.woocommerce .cart-collaterals, .woocommerce-page .cart-collaterals{
+
+.woocommerce .cart-collaterals,
+.woocommerce-page .cart-collaterals {
     @include breakpoint(large) {
         float: right;
-    width:40%}
+        width: 40%
+    }
 }
-.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals{
+
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
     width: 100%;
 }
 
@@ -851,27 +877,30 @@ button.plus {
     display: inline-block;
 }
 
-.woocommerce table.shop_table_responsive tr td::before, .woocommerce-page table.shop_table_responsive tr td::before{
+.woocommerce table.shop_table_responsive tr td::before,
+.woocommerce-page table.shop_table_responsive tr td::before {
     margin-right: 5px;
 }
 
-.desktop-thumbnails{
+.desktop-thumbnails {
     display: none;
+
     @include breakpoint(medium) {
         display: block;
     }
 }
 
-.mobile-thumbnails{
+.mobile-thumbnails {
     @include breakpoint(medium) {
         display: none;
     }
 }
+
 .slick-dots {
     bottom: 0;
 }
 
-.slick-dots li button:before{
+.slick-dots li button:before {
     font-size: 8px;
 }
 
@@ -883,7 +912,7 @@ button.plus {
     position: absolute;
     top: 10px;
     right: 10px;
-    color:white;
+    color: white;
     background-color: #5a5a5a;
     padding: 5px;
     border-radius: 8px;
