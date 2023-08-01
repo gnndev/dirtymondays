@@ -9,7 +9,7 @@
  ?>
 <div id="footer-widget" class="content">
     <div class="grid-x">
-        <div class="cell small-12 medium-2">
+        <div class="cell small-5 medium-2">
 
             <?php if ( is_active_sidebar( 'footer1' ) ) : ?>
 
@@ -18,7 +18,7 @@
             <?php endif; ?>
 
         </div>
-        <div class="cell small-12 medium-2">
+        <div class="cell small-5 medium-2">
 
             <?php if ( is_active_sidebar( 'footer2' ) ) : ?>
 
@@ -28,12 +28,12 @@
 
         </div>
         <?php if ( is_active_sidebar( 'footer3' ) ) : ?>
-        <div class="cell small-12 medium-2">
+        <div class="cell small-2 medium-2">
             <?php dynamic_sidebar( 'footer3' ); ?>
         </div>
         <?php endif; ?>
 
-        <div class="cell small-12 medium-2">
+        <div class="cell small-2 medium-2">
 
             <?php if ( is_active_sidebar( 'footer5' ) ) : ?>
 

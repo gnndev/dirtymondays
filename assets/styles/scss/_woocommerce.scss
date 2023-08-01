@@ -119,10 +119,9 @@
         width: fit-content;
         justify-content: center;
         text-transform: uppercase;
-        font-size: 18px;
+        font-size: 30px;
         padding: 12px;
-        background-color: $secondary-color;
-        color: white;
+        color: black;
     }
     .featured-products-grid{
         display: flex;
@@ -140,22 +139,27 @@
 
     .products-filters {
         //make scrollable on mobile
-        overflow-x: scroll;
-        white-space: nowrap;
-
+        // overflow-x: scroll;
+        // white-space: nowrap;
+        display:flex;
+        flex-wrap: wrap;
         //on desktop remove scrollable
         @include breakpoint(medium) {
             overflow-x: unset;
             white-space: unset;
+         flex-wrap: unset;
         }
 
-        display:flex;
+       
 
         >div {
 
             margin-bottom: 10px;
             background-color: black;
             padding: 5px 10px;
+            @include breakpoint(medium) {
+                padding: 5px 30px;
+            }
             text-transform: uppercase;
             font-weight: 600;
             color: white;
@@ -269,6 +273,17 @@
 
 }
 
+.woocommerce div.product p.price
+{
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    @include breakpoint(medium) {
+        position: relative;
+        top: unset;
+        right: unset;
+    }
+}
 .woocommerce div.product p.price,
 .woocommerce div.product span.price {
     color: black;
@@ -304,7 +319,10 @@
 }
 
 .woocommerce div.product div.images {
+    margin-bottom: 0;
+    @include breakpoint(medium) {
     margin-bottom: 1em;
+    }
 }
 
 .woocommerce div.product div.images .woocommerce-product-gallery__image:nth-child(n+2) {
@@ -345,14 +363,15 @@
 }
 
 .woocommerce div.product .product_title {
-    display: none;
-    border-bottom: 1px solid black;
+    
+    background-color: #eee;
     margin-bottom: 20px;
-    font-size: 26px;
-    padding-right: 20px;
+    font-size: 20px;
+    padding: 5px;
     text-transform: uppercase;
-
-    @include breakpoint(medium) {
+    @include breakpoint(medium){
+        padding-right: 20px;
+        background-color: unset;
         font-size: 2rem;
         display: inline-block;
     }
@@ -455,10 +474,6 @@
     }
 }
 
-.woocommerce div.product .product_title {
-    font-size: 2rem;
-    text-transform: uppercase;
-}
 
 .woocommerce div.product div.summary {
     @include breakpoint(medium) {

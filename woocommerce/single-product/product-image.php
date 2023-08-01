@@ -44,7 +44,6 @@ $attachment_ids = $product->get_gallery_image_ids(); ?>
 		?>
 	</figure>
 	<div class="mobile-thumbnails">
-		<?php the_title( '<h1 class="mobile_product_title entry-title">', '</h1>' ); ?>
 		<div class="single-item ">
 		<?php
 			echo '<div class="single-slide">'. wp_get_attachment_image( $product->get_image_id(), 'full'  ) .'</div>'; // phpcs:disable WordPress.XSS.EscapeOutput.OutputNotEscaped
