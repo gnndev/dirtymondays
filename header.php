@@ -20,6 +20,7 @@
     <!-- Mobile Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta class="foundation-mq">
+    <title> <?php wp_title('', true,''); ?> </title>
 
     <?php if ( ! function_exists( 'has_site_icon' ) || ! has_site_icon() ) { ?>
     <!-- Icons & Favicons -->
@@ -88,3 +89,5 @@
 
 
     </header> <!-- end .header -->
+
+    <?php get_template_part( 'parts/shop', 'banner' ); ?>

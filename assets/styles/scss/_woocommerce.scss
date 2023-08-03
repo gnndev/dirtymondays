@@ -82,7 +82,7 @@
 }
 
 .products-header {
-    margin-top: 90px;
+    margin-top: 85px;
     background-position: center;
     padding-top: 99.07%;
     background-image: url('https://dirtymondays.com/wp-content/uploads/2020/10/DIRTYMONDAYS_shop_cover_mobile_3DEF.jpg');
@@ -97,7 +97,7 @@
 }
 
 .products-hero {
-    margin-top: 90px;
+    margin-top: 85px;
 
     img {
         width: 100%;
@@ -932,4 +932,21 @@ table.variations {
     padding: 5px;
     border-radius: 8px;
     text-transform: uppercase;
+}
+
+.show-banner{
+    margin-top: 85px;
+    margin-bottom: -85px;
+    @include breakpoint(medium) {
+        margin-top: 100px;
+        margin-bottom: -100px;
+    }
+    background:white; color:black;
+   
+    .content{
+    padding-top: 0!important;
+    }
+    p{
+        margin-bottom: 0;
+    }
 }

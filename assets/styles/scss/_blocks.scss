@@ -167,7 +167,7 @@
     clear: both;
   }
   .block-event-single {
-    min-height: 90px;
+    min-height: 85px;
     position: relative;
     color: #000000;
     display: flex;
@@ -490,7 +490,7 @@
 //
 
 .home-cover-image {
-  margin-top: 90px;
+  margin-top: 85px;
 
   @include breakpoint(medium) {
     margin-top: 100px;
@@ -560,7 +560,10 @@
 }
 
 .fixedtop {
-  margin-top: 90px;
+  margin-top: 85px;
+  @include breakpoint(medium) {
+    margin-top: 100px;
+  }
 }
 
 #dm-tabs li a {
