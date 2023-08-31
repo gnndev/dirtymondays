@@ -21,7 +21,6 @@ get_header(); ?>
 <div id="newsletter-block">
 
     <div class="newsletter-block-content">
-        <h2>SUBSCRIBE</h2>
         <?php echo do_shortcode('[ninja_form id=99]'); ?>
     </div>
 </div>
