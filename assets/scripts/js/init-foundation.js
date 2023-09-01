@@ -125,6 +125,37 @@ jQuery('.single-item').slick({
   dots: true,
 });
 
+jQuery('.featured-products-slider').slick({
+  dots: true,
+  arrows : false,
+  infinite: false,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 4,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 var accountInstagram = document.getElementById("instagram-account");
 if (accountInstagram){
   accountInstagram.addEventListener('click', function(e){

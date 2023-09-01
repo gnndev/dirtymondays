@@ -53,10 +53,10 @@ get_header(); ?>
             $loop = new WP_Query($featured);
             if ($loop->have_posts()) : ?>
                 <h2>Dirty trends</h2>
-                <div class="products featured-products-grid">
+                <div class="products featured-products-slider featured-products-grid">
                     <?php
                     while ($loop->have_posts()) : $loop->the_post(); ?>
-                        <div class="products-grid-item">
+                        <div class="featured-products-grid-item">
                             <a href="<?php the_permalink(); ?>">
                                 <?php the_post_thumbnail('woocommerce_thumbnail'); ?>
                             </a>

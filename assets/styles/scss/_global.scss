@@ -48,9 +48,9 @@ select {
     padding-top: 100px;
     // margin-bottom: 40px;
     // padding-bottom: 40px;
-    width: 90%;
-    margin-left: 5%;
-    margin-right: 5%;
+    width: calc(100% - 32px);
+    margin-left: 16px;
+    margin-right: 16px;
   }
 
   width: 80%;

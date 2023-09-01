@@ -109,26 +109,48 @@
 }
 
 .products-featured {
-    display: flex;
-    align-items: center;
+ 
     padding-top: 32px;
-    flex-direction: column;
+
     > h2{
-        display: flex;
-        align-items: center;
-        width: fit-content;
-        justify-content: center;
+       text-align: center;
         text-transform: uppercase;
         font-size: 30px;
         padding: 12px;
         color: black;
     }
+
+    .slick-slide {
+        margin: 0 6px;
+
+
+    }
     .featured-products-grid{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 16px;
-        width: 100%;
+        margin-right: -6px;
+        margin-left: -6px;
+        
+        img {
+            max-width: 100%;
+        }
+
+        .featured-products-grid-item{
+            text-align: center;
+            h2 {
+                margin-top: 15px;
+                margin-bottom: 5px;
+                font-size: rem-calc(12);
+            }
+        
+            p {
+                font-size: rem-calc(12);
+            }
+        }
+
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: center;
+        // margin-top: 16px;
+        // width: 100%;
     }
 }
 .products-bar {
@@ -143,6 +165,7 @@
         // white-space: nowrap;
         display:flex;
         flex-wrap: wrap;
+        justify-content:center;
         //on desktop remove scrollable
         @include breakpoint(medium) {
             overflow-x: unset;
@@ -185,13 +208,14 @@
     text-transform: uppercase;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 
 }
 
 .products-grid-item {
     text-align: center;
-    margin: 12px 12px 25px;
-    width: calc(50% - 24px);
+    margin: 12px 0;
+    width: calc(50% - 8px);
 
 
     @include breakpoint(medium) {
