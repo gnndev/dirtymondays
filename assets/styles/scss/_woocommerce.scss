@@ -121,13 +121,13 @@
     }
 
     .slick-slide {
-        margin: 0 6px;
+        margin: 0 5px;
 
 
     }
     .featured-products-grid{
-        margin-right: -6px;
-        margin-left: -6px;
+        margin-right: -5px;
+        margin-left: -5px;
         
         img {
             max-width: 100%;
@@ -215,7 +215,7 @@
 .products-grid-item {
     text-align: center;
     margin: 12px 0;
-    width: calc(50% - 8px);
+    width: calc(50% - 5px);
 
 
     @include breakpoint(medium) {
