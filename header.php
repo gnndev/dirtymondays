@@ -37,7 +37,7 @@
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
 
     <?php wp_head(); ?>
-    <?php if ( is_product() || is_shop() ) { ?>
+    <?php if ( is_product() || is_shop() || is_page('shop')) { ?>
     <script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/dcca022910725cce082212be2/c49a1fb5cbf13cae1db8d3ba9.js");</script>
     <?php } ?>
 </head>
@@ -91,4 +91,9 @@
 
     </header> <!-- end .header -->
 
-    <?php get_template_part( 'parts/shop', 'banner' ); ?>
+    <?php 
+    //if is  page shop or product
+    if ( is_page('shop') || is_shop()) {
+        get_template_part( 'parts/shop', 'banner' );
+    }
+    ?>
