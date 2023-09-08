@@ -136,8 +136,8 @@
         .featured-products-grid-item{
             text-align: center;
             h2 {
-                margin-top: 15px;
-                margin-bottom: 5px;
+                margin-top: 10px;
+                margin-bottom: 0px;
                 font-size: rem-calc(12);
             }
         
@@ -154,10 +154,10 @@
     }
 }
 .products-bar {
-    margin-top: 32px;
+    margin-top: 16px;
     display: flex;
     justify-content: center;
-    margin-bottom: 32px;
+    margin-bottom: 16px;
 
     .products-filters {
         //make scrollable on mobile
@@ -214,7 +214,7 @@
 
 .products-grid-item {
     text-align: center;
-    margin: 12px 0;
+    margin: 8px 0 0;
     width: calc(50% - 5px);
 
 
@@ -224,8 +224,8 @@
     }
 
     h2 {
-        margin-top: 15px;
-        margin-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 0px;
         font-size: rem-calc(12);
     }
 

@@ -20,9 +20,13 @@ get_header(); ?>
 
 <div id="newsletter-block">
 
-    <div class="newsletter-block-content">
-        <?php echo do_shortcode('[ninja_form id=99]'); ?>
-    </div>
+    
+        <?php //if single product page
+        if (is_product()) {
+            get_template_part('parts/content', 'mailchimp');
+        } else
+         echo '<div class="newsletter-block-content">' . do_shortcode('[ninja_form id=99]') .'</div>'; ?> 
+    
 </div>
 
 <?php get_footer(); ?>
