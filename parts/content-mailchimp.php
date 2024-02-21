@@ -92,20 +92,18 @@
                             <div class="datefield"><span class="subfield monthfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="MM" size="2" maxlength="2" name="MMERGE5[month]" id="mce-MMERGE5-month" value=""></span> /<span class="subfield dayfield"><input class="birthday REQ_CSS" type="text" pattern="[0-9]*" placeholder="DD" size="2" maxlength="2" name="MMERGE5[day]" id="mce-MMERGE5-day" value=""></span><span class="small-meta nowrap">( mm / dd )</span></div>
                         </div>
                         <div class="mc-field-group input-group "><label>Country <span class="asterisk">*</span></label>
-                            <ul>
+                            <ul style="margin-top:-10px">
                                 <li><input type="radio" name="COUNTRY" id="mce-COUNTRY0" value="Europe" required><label for="mce-COUNTRY0">Europe</label></li>
                                 <li><input type="radio" name="COUNTRY" id="mce-COUNTRY1" value="USA"><label for="mce-COUNTRY1">USA</label></li>
                             </ul>
                         </div>
-                        <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                        <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group" style="margin-top:10px">
                             <div class="content__gdpr">
                                
-                                <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field"><label class="checkbox subfield" for="gdpr42876"><input type="checkbox" id="gdpr_42876" name="gdpr[42876]" class="gdpr" value="Y"><span>I have read and accept the Privacy Policy.</span></label></fieldset>
+                                <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field"><label class="checkbox subfield" for="gdpr42876"><input type="checkbox" id="gdpr_42876" name="gdpr[42876]" class="gdpr" value="Y"><span><small>I have read and accept the Privacy Policy.</small></span></label></fieldset>
             
                             </div>
-                            <div class="content__gdprLegal">
-                                <p><small>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/terms">Learn more</a> about Mailchimp's privacy practices.</small></p>
-                            </div>
+                           
                         </div>
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display: none;"></div>
@@ -113,6 +111,9 @@
                         </div>
                         <div aria-hidden="true" style="position: absolute; left: -5000px;"><input type="text" name="b_dcca022910725cce082212be2_57577179d9" tabindex="-1" value=""></div>
                         <div class="clear"><input type="submit" name="subscribe" id="mc-embedded-subscribe" class="button" value="Subscribe"></div>
+                        <div class="content__gdprLegal" style="margin-top:10px">
+                                <p><small>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/terms">Learn more</a> about Mailchimp's privacy practices.</small></p>
+                            </div>
                     </div>
                 </form>
             </div>
