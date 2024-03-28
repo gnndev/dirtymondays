@@ -1,0 +1,144 @@
+.concerts-slider{
+    
+    @include breakpoint(medium){
+    margin-top: 70px;
+    }
+    .slick-dots {
+        bottom: -35px;
+       
+    }
+    .slick-dots li.slick-active button:before {
+        color: #ed0707;
+    }
+    .slick-dots li button:before {
+        color: #fff;
+    }
+
+    .slick-arrow{
+        top: 90%;
+        z-index: 999;
+       &::before{
+            font-size: 24px;
+   
+       }
+        &.slick-prev{
+            left: 30px;
+        }
+        &.slick-next{
+            left: 80px;
+        }
+    }
+    
+}
+.concert-slide{
+    @include breakpoint(medium){
+    padding: 30px;
+    }
+    h3 {
+       
+        font-size: clamp(24px,6vw,64px);
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 24px;
+    }
+    h4{
+       font-size: 24px;
+       line-height: 28px; 
+       text-transform: uppercase;
+       opacity: 0.8;
+
+    }
+    p{
+        margin-top: 24px;
+        font-size: 18px; 
+        line-height: 21px;
+
+        span{
+            color: #ed0707;
+        }
+    }
+
+    
+}
+
+.upcoming{
+    
+    margin-top: 50px;
+    @include breakpoint(medium){
+        margin-top: 60px;
+    }
+    .content {
+        padding-top: 0;
+    }
+    .slick-slide {
+        margin: 20px 16px;
+    }
+    h3 {
+        font-size: 24px;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 24px;
+    text-transform: uppercase;
+    }
+    h4{
+       font-size: 24px;
+       line-height: 28px; 
+       text-transform: uppercase;
+       opacity: 0.8;
+
+    }
+    p{
+        margin-top: 24px;
+        font-size: 18px; 
+        line-height: 21px;
+
+        span{
+            color: #ed0707;
+        }
+    }
+
+    .slick-dots {
+        bottom: 20px;
+       
+    }
+    .slick-dots li.slick-active button:before {
+        color: #ed0707;
+    }
+    .slick-dots li button:before {
+        color: #fff;
+    }
+}
+
+.btn-concert{
+    display: block;
+    text-transform: uppercase;
+    text-align: center;
+    @include breakpoint(medium){
+        text-align: left;
+    display: inline-block;
+    }
+    margin-top: 24px;
+    background-color: #ed0707;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color: #fff;
+        color: #ed0707;
+    }
+}
+
+.upcoming {
+    h2{
+        display: flex;
+        align-items: center;
+
+    svg{
+        margin-left: 10px;
+    }
+}
+
+}

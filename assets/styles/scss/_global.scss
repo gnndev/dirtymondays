@@ -78,6 +78,10 @@ select {
   margin-left: 10%;
   margin-right: 10%;
 
+  .content{
+    padding-top: 0px;
+  }
+
   @include breakpoint(medium) {
     width: 50%;
     margin: 0 auto;

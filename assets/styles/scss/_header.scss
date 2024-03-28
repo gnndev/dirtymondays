@@ -66,6 +66,15 @@
 
     }
 
+    .logo-mobile-present{
+        flex: 1 1 auto;
+
+        img {
+            max-width: 280px;
+            padding: 10px;
+        }
+    }
+
     span {
         flex: 0 0 40px;
         text-align: center;
